@@ -5,8 +5,9 @@
 export const SITE_URL = 'https://g2martins.github.io/G2Store';
 export const SITE_NAME = 'G2Store';
 export const AUTHOR = 'Gustavo Martins Gripaldi';
-export const PORTFOLIO_URL = 'https://g2portfolio.grovicdata.com';
-export const PROJECT_URL = 'https://g2portfolio.grovicdata.com/projetos/g2store';
+// Trailing slashes: the portfolio is on GitHub Pages, where /path answers with a 301 to /path/.
+export const PORTFOLIO_URL = 'https://g2portfolio.grovicdata.com/';
+export const PROJECT_URL = 'https://g2portfolio.grovicdata.com/projetos/g2store/';
 export const REPO_URL = 'https://github.com/G2Martins/G2Store';
 export const OG_IMAGE = '/og/g2store.png';
 export const COUPON = { code: 'G2DEMO10', percent: 10 };

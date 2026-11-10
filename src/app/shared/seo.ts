@@ -22,7 +22,7 @@ export const websiteNode = () => ({
   name: SITE_NAME,
   inLanguage: 'pt-BR',
   description: 'Loja simulada de jogos digitais, gift cards e consoles. Projeto de portfólio.',
-  creator: { '@type': 'Person', name: AUTHOR, url: PORTFOLIO_URL },
+  creator: { '@type': 'Person', '@id': `${PORTFOLIO_URL}#person`, name: AUTHOR, url: PORTFOLIO_URL },
   potentialAction: {
     '@type': 'SearchAction',
     target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/jogos/?q={busca}` },
