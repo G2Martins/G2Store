@@ -17,7 +17,7 @@
   --accent-ink: #060a24;
   --ok: #7ee2a8;
   --warn: #ffcf5c;
-  --dot: rgb(170 182 255 / 0.08);
+  --dot: rgb(170 182 255 / 0.06);
   color-scheme: dark;
 }
 
@@ -56,19 +56,14 @@
     overflow-x: clip;
     font-variant-numeric: tabular-nums;
   }
-  /* Deep blue atmosphere + dot grid, painted once on fixed layers. */
+  /* Deep blue atmosphere + dot grid, one fixed layer painted once (no mask: cheap on phones). */
   body::before {
     content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
     background:
+      radial-gradient(circle, var(--dot) 1px, transparent 1px) 0 0 / 22px 22px,
       radial-gradient(1100px 620px at 92% -8%, rgb(52 66 235 / 0.42), transparent 62%),
       radial-gradient(900px 560px at -12% 34%, rgb(12 14 140 / 0.6), transparent 62%),
       linear-gradient(180deg, #050826 0%, #060a33 46%, #08104f 100%);
-  }
-  body::after {
-    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
-    background-image: radial-gradient(circle, var(--dot) 1px, transparent 1px);
-    background-size: 22px 22px;
-    mask-image: linear-gradient(180deg, #000 0%, transparent 75%);
   }
   ::selection { background: rgb(200 245 60 / 0.3); color: #fff; }
   :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
@@ -251,6 +246,10 @@
   .bi-nintendo { --bi: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M14.176 24h3.674c3.376 0 6.15-2.774 6.15-6.15V6.15C24 2.775 21.226 0 17.85 0H14.1c-.074 0-.15.074-.15.15v23.7c-.001.076.075.15.226.15zm4.574-13.199c1.351 0 2.399 1.125 2.399 2.398 0 1.352-1.125 2.4-2.399 2.4-1.35 0-2.4-1.049-2.4-2.4-.075-1.349 1.05-2.398 2.4-2.398zM11.4 0H6.15C2.775 0 0 2.775 0 6.15v11.7C0 21.226 2.775 24 6.15 24h5.25c.074 0 .15-.074.15-.149V.15c.001-.076-.075-.15-.15-.15zM9.676 22.051H6.15c-2.326 0-4.201-1.875-4.201-4.201V6.15c0-2.326 1.875-4.201 4.201-4.201H9.6l.076 20.102zM3.75 7.199c0 1.275.975 2.25 2.25 2.25s2.25-.975 2.25-2.25c0-1.273-.975-2.25-2.25-2.25s-2.25.977-2.25 2.25z'/%3E%3C/svg%3E"); }
   .bi-github { --bi: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3'/%3E%3C/svg%3E"); }
 
+  /* Hero slides crossfade; hidden ones are also visibility:hidden so they are never painted. */
+  .slide { transition: opacity 700ms var(--ease-out-expo), visibility 0s linear 0s; }
+  .slide.slide-off { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 700ms var(--ease-out-expo), visibility 0s linear 700ms; }
+
   /* Off-screen sections skip style/layout/paint until near the viewport. */
   .cv { content-visibility: auto; contain-intrinsic-size: auto 560px; }
   .cv-card { content-visibility: auto; contain-intrinsic-size: auto 380px; }
@@ -285,5 +284,6 @@
 @media (prefers-reduced-motion: reduce) {
   .rise, .materialize, .fade-in, .live-dot, .bar-run { animation: none !important; }
   .js [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .slide, .slide.slide-off { transition: none !important; }
   .lift, .lift:hover, .zoom { transform: none !important; transition: none !important; }
 }

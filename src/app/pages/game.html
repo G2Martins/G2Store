@@ -2,7 +2,7 @@
   <!-- Key art band -->
   <div class="pointer-events-none absolute inset-x-0 top-0 h-[480px] overflow-hidden" aria-hidden="true">
     @if (g.artworks[0] || g.screenshots[0]; as art) {
-      <img [src]="img(art, 'screenshot_med')" [srcset]="img(art, 'screenshot_med') + ' 569w, ' + wideSet(art)" sizes="60vw" width="1920" height="1080"
+      <img [src]="img(art, 'screenshot_med')" [srcset]="wideSet(art)" sizes="60vw" width="1920" height="1080"
            class="h-full w-full object-cover opacity-35" alt="" />
     }
     <div class="absolute inset-0 bg-gradient-to-b from-[#050826]/30 via-[#050826]/70 to-[#050826]"></div>
@@ -124,7 +124,7 @@
           <section aria-label="Galeria de imagens">
             <button type="button" class="group relative block w-full overflow-hidden rounded-[14px] border border-line" (click)="open(shot())"
                     [attr.aria-label]="'Ampliar imagem ' + (shot() + 1) + ' de ' + shots().length">
-              <img [src]="img(shots()[shot()], 'screenshot_big')" [srcset]="wideSet(shots()[shot()])" sizes="(min-width: 1024px) 760px, 100vw"
+              <img [src]="img(shots()[shot()], 'screenshot_big')" [srcset]="wideSet(shots()[shot()])" sizes="(min-width: 1024px) 760px, 320px"
                    width="889" height="500" class="aspect-video h-auto w-full object-cover" loading="lazy" [alt]="'Imagem ' + (shot() + 1) + ' de ' + g.name" />
               <span class="absolute bottom-3 right-3 rounded-lg bg-[#050826]/80 px-2.5 py-1.5 font-mono text-[11px] text-ink-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">Ampliar</span>
             </button>

@@ -49,6 +49,11 @@ export class Home {
   protected paused = signal(false);
   protected ready = signal(false);
   protected reduced = signal(false);
+  /** Slides whose art may download. Starts with the LCP slide only. */
+  protected loaded = signal(new Set([0]));
+  /** The title mask-rise plays on slide changes, never on first paint (keeps the hero LCP-friendly). */
+  protected moved = signal(false);
+  protected art = (id: string) => img(id, 'screenshot_big');
   private timer?: ReturnType<typeof setTimeout>;
 
   private byTop = (a: Game, b: Game) => (a.top ?? 99) - (b.top ?? 99);
@@ -75,6 +80,7 @@ export class Home {
   protected gifts = GIFT_CARDS;
   protected hardware = HARDWARE.filter((h) => h.kind !== 'Controle').slice(0, 5);
   protected giftFrom = (values: number[]) => Math.min(...values);
+  protected skel = [0, 1, 2, 3, 4, 5];
 
   constructor() {
     inject(Seo).set({
@@ -88,6 +94,9 @@ export class Home {
       this.reduced.set(matchMedia('(prefers-reduced-motion: reduce)').matches);
       this.ready.set(true);
       this.schedule();
+      // Warm the next slide's art once the page is idle, before autoplay needs it.
+      const warm = () => this.preload(1);
+      'requestIdleCallback' in window ? requestIdleCallback(warm, { timeout: 4000 }) : setTimeout(warm, 3000);
     });
     destroy.onDestroy(() => clearTimeout(this.timer));
   }
@@ -98,9 +107,17 @@ export class Home {
     this.timer = setTimeout(() => this.go(this.active() + 1, false), SLIDE_MS);
   }
 
+  private preload(i: number) {
+    const n = HERO.length;
+    this.loaded.update((set) => (set.has((i + n) % n) ? set : new Set([...set, (i + n) % n])));
+  }
+
   protected go(i: number, user = true) {
     const n = HERO.length;
     this.active.set((i + n) % n);
+    this.moved.set(true);
+    this.preload(i);
+    this.preload(i + 1);
     if (user) this.paused.set(true);
     this.schedule();
   }

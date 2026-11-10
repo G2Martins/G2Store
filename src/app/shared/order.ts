@@ -100,7 +100,7 @@ export class OrderCard {
     const digital = o.items.filter((i) => i.kind !== 'hw');
     const ready = digital.filter((i) => this.released(i));
     const codeStep = !digital.length
-      ? { label: 'Entrega', done: this.clock.now() - o.at > 10 * MIN, note: this.delivery() }
+      ? { label: 'Entrega', done: this.delivery().startsWith('Entregue'), note: this.delivery() }
       : { label: 'Código liberado', done: ready.length > 0, note: ready.length === digital.length ? time(o.at) : `${ready.length} de ${digital.length} itens, o resto no lançamento` };
     return [
       { label: 'Pedido recebido', done: true, note: time(o.at) },
@@ -111,7 +111,8 @@ export class OrderCard {
 
   /** Simulated shipping timeline driven by the order age. */
   protected delivery = computed(() => {
-    const age = this.clock.now() - this.order().at;
+    this.clock.now(); // re-evaluate on clock sync
+    const age = Date.now() - this.order().at; // browser-only page: real minutes, not the day clock
     if (age > 10 * MIN) return 'Entregue (simulação)';
     if (age > 2 * MIN) return 'Enviado, a caminho (simulação)';
     return 'Em separação no estoque (simulação)';

@@ -68,9 +68,10 @@ export class ClassInd {
 // ponytail: `sizes` says 140px on phones so ~1.75x screens take the 264w cover (sharp enough, ~3x lighter than 528w).
 @Component({
   selector: 'app-game-card',
-  imports: [RouterLink, Platforms, Price],
+  imports: [RouterLink],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { class: 'block' },
+  // Flat on purpose: ~50 cards hydrate on the home, so no child components (icons are CSS masks, price is inline).
   template: `
     @let g = game();
     <article class="stretch lift group">
@@ -86,14 +87,23 @@ export class ClassInd {
             @for (l of labels(); track l.text) { <span class="label" [class.label-accent]="l.kind === 'accent'" [class.label-line]="l.kind === 'line'">{{ l.text }}</span> }
           </div>
         }
-        <app-platforms class="absolute bottom-2 left-2 text-white/85" [families]="ships()" [size]="13" />
+        <span class="absolute bottom-2 left-2 inline-flex items-center gap-1.5 text-white/85">
+          @for (f of ships(); track f) { <span class="bi h-[13px] w-[13px]" [class]="'bi-' + icon[f]"></span> }
+          <span class="sr-only">Plataformas: {{ shipNames() }}</span>
+        </span>
       </div>
       <h3 class="mt-3 text-[14px] font-medium leading-snug clamp-2 min-h-[2.6em]">
         <a class="stretch-link" [routerLink]="['/jogo', g.slug]">{{ g.name }}</a>
       </h3>
       <div class="mt-1.5">
         @if (sellable()) {
-          <app-price [list]="price().list" [sale]="price().sale" [off]="g.off" />
+          <span class="inline-flex flex-wrap items-center gap-x-2 gap-y-1">
+            @if (g.off) {
+              <span class="off">-{{ g.off }}%</span>
+              <span class="strike text-[12px]"><span class="sr-only">De </span>{{ brl(price().list) }}</span>
+            }
+            <span class="text-[15px] font-semibold tracking-tight text-ink">@if (g.off) {<span class="sr-only">por </span>}{{ brl(price().sale) }}</span>
+          </span>
         } @else {
           <span class="text-[13px] text-ink-2">Em breve</span>
         }
@@ -110,7 +120,10 @@ export class GameCard {
   protected cover = (id: string) => img(id, 'cover_big');
   protected coverSet = coverSet;
   protected labels = computed(() => labelsOf(this.game(), this.clock.now()));
-  protected ships = computed(() => shipsOn(this.game()));
+  protected icon = FAMILY_ICON;
+  protected brl = brl;
+  protected ships = computed(() => FAMILY_ORDER.filter((f) => shipsOn(this.game()).includes(f)));
+  protected shipNames = computed(() => this.ships().map((f) => FAMILIES[f].label).join(', '));
   protected sellable = computed(() => families(this.game(), this.clock.now()).length > 0);
   protected price = computed(() => {
     const f = this.family();
@@ -140,7 +153,7 @@ export class GameCard {
         <button type="button" class="icon-btn hidden sm:inline-grid" (click)="scroll(1)" [attr.aria-label]="'Rolar ' + heading() + ' para a direita'"><app-icon name="chevron-right" /></button>
       </div>
     </div>
-    <div #track class="shelf" role="list" [attr.aria-labelledby]="anchor()"><ng-content /></div>
+    <div #track class="shelf"><ng-content /></div>
   `,
 })
 export class Shelf {

@@ -19,7 +19,7 @@ Vende chaves e códigos para PC, PlayStation, Xbox e Nintendo, gift cards e cons
 - **Checkout simulado**: Pix com QR decorativo e botão "Simular pagamento". Não existe campo de cartão nem coleta de dados pessoais; para console pede só um CEP de 8 dígitos e, opcionalmente, um nome.
 - **Meus pedidos** e **lista de desejos** no `localStorage`: linha do tempo do pedido, códigos de demonstração com botão copiar, pré-venda liberando o código só no lançamento, entrega simulada.
 - **SEO**: todas as páginas de catálogo pré-renderizadas, title/description/canonical por rota, Open Graph, JSON-LD `WebSite` e `VideoGame` (sem `Offer`, os preços são falsos), sitemap e robots gerados.
-- **Acessibilidade e performance**: navegação por teclado, `<dialog>` nativo (foco preso e Esc), `aria-live` no carrinho, `prefers-reduced-motion`, conteúdo visível sem JS. Lighthouse mobile local: performance 91 a 94, acessibilidade, boas práticas e SEO 100.
+- **Acessibilidade e performance**: navegação por teclado, `<dialog>` nativo (foco preso e Esc), `aria-live` no carrinho, `prefers-reduced-motion`, conteúdo visível sem JS. Lighthouse mobile local: performance 91 a 99, acessibilidade, boas práticas e SEO 100 (FCP ~1,4 s, LCP ~2,2 s).
 
 ## Stack
 

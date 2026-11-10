@@ -187,7 +187,7 @@ export function labelsOf(g: Game, now: number): { text: string; kind: 'accent' |
 export type ImgSize = 'cover_big' | 'cover_big_2x' | 'screenshot_med' | 'screenshot_big' | '720p' | '1080p' | 'thumb';
 export const img = (id: string, size: ImgSize) => `https://images.igdb.com/igdb/image/upload/t_${size}/${id}.jpg`;
 export const coverSet = (id: string) => `${img(id, 'cover_big')} 264w, ${img(id, 'cover_big_2x')} 528w`;
-export const wideSet = (id: string) => `${img(id, 'screenshot_big')} 889w, ${img(id, '720p')} 1280w, ${img(id, '1080p')} 1920w`;
+export const wideSet = (id: string) => `${img(id, 'screenshot_med')} 569w, ${img(id, 'screenshot_big')} 889w, ${img(id, '720p')} 1280w, ${img(id, '1080p')} 1920w`;
 /** Best wide key art for heroes: artworks first, then screenshots. */
 export const heroArt = (g: Game) => g.artworks[0] || g.screenshots[0] || g.cover;
 

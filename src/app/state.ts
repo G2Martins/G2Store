@@ -6,21 +6,23 @@ import {
 import { COUPON, FAMILIES, Family, SHIPPING } from './data/store';
 
 const NOW = makeStateKey<number>('now');
+/** Release rules work in days, so the clock does too: same-day visits never re-render after hydration. */
+const today = () => new Date().setHours(0, 0, 0, 0);
 
 /**
- * One clock for availability rules. The browser first renders with the prerender's timestamp
- * (so hydration matches the static HTML), then App moves it to the real time.
+ * One clock for availability rules. The browser first renders with the prerender's day
+ * (so hydration matches the static HTML), then App moves it to the visitor's day.
  */
 @Injectable({ providedIn: 'root' })
 export class Clock {
   private ts = inject(TransferState);
-  readonly now = signal(this.ts.get(NOW, Date.now()));
+  readonly now = signal(this.ts.get(NOW, today()));
   /** True once the first (hydration) render is done: later renders may use browser-only state freely. */
   readonly hydrated = signal(false);
   constructor() {
     if (!isPlatformBrowser(inject(PLATFORM_ID))) this.ts.set(NOW, this.now());
   }
-  sync() { this.now.set(Date.now()); this.hydrated.set(true); }
+  sync() { this.now.set(today()); this.hydrated.set(true); }
 }
 
 export type Line =

@@ -21,6 +21,7 @@
           "options": {
             "outputPath": "dist/g2-store",
             "browser": "src/main.ts",
+            "index": { "input": "src/index.html", "preloadInitial": false },
             "server": "src/main.server.ts",
             "outputMode": "static",
             "baseHref": "/G2Store/",
