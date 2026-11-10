@@ -1,0 +1,119 @@
+<div class="wrap pt-10 sm:pt-14">
+  <nav aria-label="Trilha" class="font-mono text-[11px] uppercase tracking-[.12em] text-dim">
+    <a routerLink="/" class="hover:text-ink">Início</a> <span class="mx-1.5">/</span> <span class="text-ink-2">{{ promoPage ? 'Promoções' : 'Jogos' }}</span>
+  </nav>
+  <div class="mt-5 flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <p class="eyebrow">{{ promoPage ? 'Ofertas da semana' : 'Catálogo' }}</p>
+      <h1 class="h-display mt-3 text-[38px] sm:text-[52px]"><span class="mask"><span class="rise">{{ heading() }}</span></span></h1>
+    </div>
+    <p class="text-[13px] text-ink-2" role="status" aria-live="polite">{{ results().length }} {{ results().length === 1 ? 'jogo encontrado' : 'jogos encontrados' }}</p>
+  </div>
+
+  <div class="mt-8 grid grid-cols-1 gap-8 lg:grid-cols-[240px_minmax(0,1fr)]">
+    <!-- Filters -->
+    <aside aria-label="Filtros">
+      <button type="button" class="btn btn-line w-full lg:hidden" [attr.aria-expanded]="showFilters()" aria-controls="filtros" (click)="showFilters.set(!showFilters())">
+        <app-icon name="sliders" [size]="16" /> {{ showFilters() ? 'Fechar filtros' : 'Filtrar e ordenar' }}
+      </button>
+      <div id="filtros" class="mt-4 space-y-7 lg:mt-0 lg:block" [class.hidden]="!showFilters()">
+        <fieldset>
+          <legend class="eyebrow">Plataforma</legend>
+          <div class="mt-3 grid grid-cols-2 gap-2 lg:grid-cols-1">
+            <label class="opt !min-h-[42px] !flex-row !items-center !justify-start gap-2 text-[13px]">
+              <input type="radio" name="plataforma" [checked]="!filters().plataforma" (change)="set('plataforma', null)" /> Todas
+            </label>
+            @for (p of platforms; track p.key) {
+              <label class="opt !min-h-[42px] !flex-row !items-center !justify-start gap-2 text-[13px]">
+                <input type="radio" name="plataforma" [checked]="filters().plataforma === p.key" (change)="set('plataforma', p.key)" />
+                <app-icon [name]="p.icon" [size]="14" /> {{ p.label }}
+              </label>
+            }
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="eyebrow">Disponibilidade</legend>
+          <div class="mt-3 space-y-2 text-[14px] text-ink-2">
+            <label class="flex cursor-pointer items-center gap-2.5"><input type="radio" name="status" class="accent-[#c8f53c]" [checked]="!filters().status" (change)="set('status', null)" /> Todos</label>
+            <label class="flex cursor-pointer items-center gap-2.5"><input type="radio" name="status" class="accent-[#c8f53c]" [checked]="filters().status === 'lancamento'" (change)="set('status', 'lancamento')" /> Lançamentos (90 dias)</label>
+            <label class="flex cursor-pointer items-center gap-2.5"><input type="radio" name="status" class="accent-[#c8f53c]" [checked]="filters().status === 'pre-venda'" (change)="set('status', 'pre-venda')" /> Pré-venda</label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend class="eyebrow">Faixa de preço</legend>
+          <div class="mt-3 space-y-2 text-[14px] text-ink-2">
+            <label class="flex cursor-pointer items-center gap-2.5"><input type="radio" name="preco" class="accent-[#c8f53c]" [checked]="!filters().preco" (change)="set('preco', null)" /> Qualquer preço</label>
+            @for (p of prices; track p.key) {
+              <label class="flex cursor-pointer items-center gap-2.5"><input type="radio" name="preco" class="accent-[#c8f53c]" [checked]="filters().preco === p.key" (change)="set('preco', p.key)" /> {{ p.label }}</label>
+            }
+          </div>
+        </fieldset>
+
+        @if (!promoPage) {
+          <label class="flex cursor-pointer items-center justify-between gap-3 rounded-xl border border-line bg-well px-3.5 py-3 text-[14px]">
+            <span class="inline-flex items-center gap-2"><app-icon name="tag" [size]="15" class="text-accent" /> Só em promoção</span>
+            <input type="checkbox" class="h-4 w-4 accent-[#c8f53c]" [checked]="filters().promo" (change)="set('promo', $any($event.target).checked ? '1' : null)" />
+          </label>
+        }
+
+        <div>
+          <label for="genero" class="eyebrow">Gênero</label>
+          <select id="genero" class="field mt-3" (change)="set('genero', $any($event.target).value)">
+            <option value="" [selected]="!filters().genero">Todos os gêneros</option>
+            @for (g of genres; track g) { <option [value]="g" [selected]="filters().genero === g">{{ g }}</option> }
+          </select>
+        </div>
+
+        @if (chips().length) {
+          <button type="button" class="btn btn-ghost w-full !justify-start !px-0 text-[13px]" (click)="clear()"><app-icon name="x" [size]="15" /> Limpar filtros</button>
+        }
+      </div>
+    </aside>
+
+    <!-- Results -->
+    <section aria-labelledby="res-title">
+      <h2 id="res-title" class="sr-only">Resultados</h2>
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <ul class="flex flex-wrap gap-2" aria-label="Filtros ativos">
+          @for (c of chips(); track c.key) {
+            <li>
+              <button type="button" class="inline-flex min-h-[32px] items-center gap-1.5 rounded-full border border-line-2 bg-panel px-3 text-[12.5px] hover:border-accent"
+                      (click)="set(c.key, null)" [attr.aria-label]="'Remover filtro ' + c.label">
+                {{ c.label }} <app-icon name="x" [size]="13" />
+              </button>
+            </li>
+          }
+        </ul>
+        <label class="ml-auto flex items-center gap-2 text-[13px] text-ink-2">
+          Ordenar por
+          <select class="field !min-h-[38px] !w-auto !py-1.5" (change)="set('ordem', $any($event.target).value)">
+            @for (s of sorts; track s.key) { <option [value]="s.key" [selected]="filters().ordem === s.key">{{ s.label }}</option> }
+          </select>
+        </label>
+      </div>
+
+      @if (visible().length) {
+        <ul class="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 xl:grid-cols-4">
+          @for (g of visible(); track g.slug; let i = $index) {
+            <li [class.materialize]="i >= 12" [class.cv-card]="i >= 8" [style.animation-delay.ms]="(i % 12) * 30"><app-game-card [game]="g" [family]="familyFor(g)" [eager]="i < 4" /></li>
+          }
+        </ul>
+        @if (results().length > visible().length) {
+          <div class="mt-10 flex flex-col items-center gap-3">
+            <p class="text-[13px] text-dim">Mostrando {{ visible().length }} de {{ results().length }}</p>
+            <button type="button" class="btn btn-line" (click)="shown.set(shown() + 12)">Carregar mais jogos</button>
+          </div>
+        }
+      } @else {
+        <div class="panel mt-6 flex flex-col items-center gap-3 px-6 py-16 text-center">
+          <app-icon name="search" [size]="26" class="text-dim" />
+          <p class="text-[15px] font-medium">Nenhum jogo com esses filtros</p>
+          <p class="max-w-sm text-[13px] text-ink-2">Lembre que cada jogo só aparece para as plataformas em que foi lançado.</p>
+          <button type="button" class="btn btn-line mt-2" (click)="clear()">Limpar filtros</button>
+        </div>
+      }
+    </section>
+  </div>
+</div>

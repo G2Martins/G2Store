@@ -1,0 +1,183 @@
+<section class="wrap pt-6 sm:pt-8" aria-roledescription="carrossel" aria-label="Destaques da semana"
+         (mouseenter)="hold(true)" (mouseleave)="hold(false)" (focusin)="hold(true)" (focusout)="hold(false)">
+  <div class="mb-5 flex items-center justify-between gap-4">
+    <h1 class="eyebrow">Jogos digitais para PC, PlayStation, Xbox e Nintendo</h1>
+    <p class="hidden font-mono text-[11px] uppercase tracking-[.14em] text-dim sm:block">Loja simulada · Pix de demonstração</p>
+  </div>
+
+  <div class="ticks">
+    <div class="relative h-[580px] overflow-hidden rounded-[18px] border border-line bg-panel sm:h-[540px]">
+      @for (s of slides(); track s.g.slug; let i = $index) {
+        <div class="absolute inset-0 transition-opacity duration-700 ease-out-expo"
+             [class.opacity-0]="i !== active()" [class.pointer-events-none]="i !== active()" [attr.inert]="i !== active() ? '' : null"
+             role="group" aria-roledescription="slide" [attr.aria-label]="(i + 1) + ' de ' + slides().length + ': ' + s.g.name">
+          @if (i === 0 || ready()) {
+            <img class="absolute inset-0 h-full w-full object-cover object-[70%_center]" [src]="'https://images.igdb.com/igdb/image/upload/t_screenshot_big/' + s.art + '.jpg'"
+                 [srcset]="wideSet(s.art)" sizes="(min-width: 1280px) 1232px, 100vw" width="1920" height="1080"
+                 [attr.fetchpriority]="i === 0 ? 'high' : 'low'" decoding="async" alt="" />
+          }
+          <div class="absolute inset-0 bg-gradient-to-t from-[#050826] via-[#050826]/75 to-[#050826]/10 lg:bg-gradient-to-r lg:via-[#050826]/70 lg:to-transparent"></div>
+          <div class="absolute inset-0 dotgrid opacity-50"></div>
+          <div class="relative flex h-full flex-col justify-end p-6 pb-8 sm:p-10 lg:w-[62%] lg:p-12">
+            <p class="eyebrow !text-white/85">{{ s.kicker }} · {{ s.scope }}</p>
+            <h2 class="h-display mt-4 text-[38px] sm:text-[54px] lg:text-[62px]">
+              <span class="mask"><span [class.rise]="i === active()">{{ s.g.name }}</span></span>
+            </h2>
+            <p class="mt-4 max-w-md text-[15px] text-ink-2 sm:text-[16px]">{{ s.tagline }}</p>
+            @if (s.state === 'preorder' && s.launch) {
+              <div class="mt-6">
+                <p class="mb-2 font-mono text-[10.5px] uppercase tracking-[.14em] text-accent">Lança em {{ s.launch.split('-').reverse().join('/') }}</p>
+                <app-countdown [to]="s.launch" />
+              </div>
+            }
+            <div class="mt-7 flex flex-wrap items-center gap-x-5 gap-y-4">
+              <app-price [list]="s.price.list" [sale]="s.price.sale" [off]="s.g.off" [big]="true" />
+              <a [routerLink]="['/jogo', s.g.slug]" class="btn btn-primary">
+                {{ s.state === 'preorder' ? 'Garantir pré-venda' : 'Comprar agora' }} <app-icon name="arrow-right" [size]="16" />
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="mt-4 flex items-center gap-3">
+      <div class="grid flex-1 grid-cols-4 gap-2" role="group" aria-label="Escolher destaque" (keydown)="pickerKey($event)">
+        @for (s of slides(); track s.g.slug; let i = $index) {
+          <button type="button" class="group relative overflow-hidden rounded-[10px] border px-3 pb-2.5 pt-3 text-left transition-colors"
+                  [class]="i === active() ? 'border-line-2 bg-panel' : 'border-line bg-transparent hover:bg-panel/60'"
+                  [attr.aria-current]="i === active() ? 'true' : null" [attr.tabindex]="i === active() ? 0 : -1"
+                  [attr.aria-label]="'Mostrar destaque ' + (i + 1) + ': ' + s.g.name" (click)="go(i)">
+            <span class="absolute inset-x-0 top-0 h-[2px] bg-line"></span>
+            @if (i === active()) {
+              @if (ready() && !paused() && !reduced()) {
+                <span class="bar-run absolute inset-x-0 top-0 h-[2px] bg-accent" [style.animation-duration.ms]="slideMs"></span>
+              } @else {
+                <span class="absolute inset-x-0 top-0 h-[2px] bg-accent"></span>
+              }
+            }
+            <span class="block font-mono text-[10.5px] tracking-[.12em] text-dim">0{{ i + 1 }}</span>
+            <span class="mt-1 hidden truncate text-[13px] font-medium sm:block" [class.text-ink-2]="i !== active()">{{ s.g.name }}</span>
+            <span class="hidden truncate text-[12px] text-dim md:block">{{ s.kicker }}</span>
+          </button>
+        }
+      </div>
+      <button type="button" class="icon-btn shrink-0 border border-line" (click)="go(active() - 1)" aria-label="Destaque anterior"><app-icon name="chevron-left" /></button>
+      <button type="button" class="icon-btn shrink-0 border border-line" (click)="go(active() + 1)" aria-label="Próximo destaque"><app-icon name="chevron-right" /></button>
+      <button type="button" class="icon-btn shrink-0 border border-line" (click)="togglePause()" [attr.aria-label]="paused() || reduced() ? 'Retomar rotação automática' : 'Pausar rotação automática'">
+        @if (paused() || reduced()) { <app-icon name="play" [size]="15" /> } @else {
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16" rx="1" /><rect x="14" y="4" width="4" height="16" rx="1" /></svg>
+        }
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Store promises (simulated) -->
+<section class="wrap mt-14" aria-label="Como funciona">
+  <ul class="grid gap-3 sm:grid-cols-3">
+    <li class="panel flex gap-3.5 p-4" reveal>
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent"><app-icon name="key" [size]="18" /></span>
+      <div><p class="text-[14px] font-medium">Código digital na hora</p><p class="mt-0.5 text-[13px] text-ink-2">Aparece em Meus pedidos assim que o Pix simulado é aprovado.</p></div>
+    </li>
+    <li class="panel flex gap-3.5 p-4" reveal="80">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent"><app-icon name="shield" [size]="18" /></span>
+      <div><p class="text-[14px] font-medium">Só plataformas compatíveis</p><p class="mt-0.5 text-[13px] text-ink-2">Cada jogo é vendido apenas para onde foi lançado, com a loja certa.</p></div>
+    </li>
+    <li class="panel flex gap-3.5 p-4" reveal="160">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-accent/10 text-accent"><app-icon name="zap" [size]="18" /></span>
+      <div><p class="text-[14px] font-medium">Pix de demonstração</p><p class="mt-0.5 text-[13px] text-ink-2">Nenhum dado de pagamento é pedido. Nenhuma cobrança é feita.</p></div>
+    </li>
+  </ul>
+</section>
+
+<div class="wrap mt-16 space-y-16 sm:mt-20 sm:space-y-20">
+  <app-shelf eyebrow="Novidades" heading="Lançamentos" anchor="sh-lancamentos" link="/jogos" [query]="{ ordem: 'lancamento' }" reveal>
+    @for (g of releases(); track g.slug) { <div role="listitem"><app-game-card [game]="g" /></div> }
+  </app-shelf>
+
+  <app-shelf eyebrow="Reserve antes" heading="Pré-venda" anchor="sh-prevenda" class="cv" link="/jogos" [query]="{ status: 'pre-venda' }" reveal>
+    @for (g of preorders(); track g.slug) { <div role="listitem"><app-game-card [game]="g" /></div> }
+  </app-shelf>
+
+  <app-shelf eyebrow="Top da semana" heading="Mais vendidos" anchor="sh-top" class="cv" link="/jogos" reveal>
+    @for (g of bestsellers(); track g.slug; let i = $index) {
+      <div role="listitem">
+        <span class="mb-2 flex items-center gap-2 font-mono text-[11px] tracking-[.12em] text-dim"><span class="text-accent">#{{ i + 1 }}</span><span class="h-px flex-1 bg-line"></span></span>
+        <app-game-card [game]="g" />
+      </div>
+    }
+  </app-shelf>
+
+  <app-shelf eyebrow="Ofertas" heading="Promoções" anchor="sh-promo" class="cv" link="/promocoes" reveal>
+    @for (g of deals(); track g.slug) { <div role="listitem"><app-game-card [game]="g" /></div> }
+  </app-shelf>
+
+  <!-- Per platform: one shelf at a time behind accessible tabs. -->
+  <section class="cv" aria-labelledby="sh-plataforma" reveal>
+    <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow">Por plataforma</p>
+        <h2 id="sh-plataforma" class="h2 mt-2.5 text-[24px] sm:text-[30px]">Escolha sua plataforma</h2>
+      </div>
+      <div role="tablist" aria-label="Plataformas" class="flex flex-wrap gap-1.5 rounded-xl border border-line bg-well p-1" (keydown)="tabKey($event)">
+        @for (t of tabs; track t.key) {
+          <button type="button" role="tab" [id]="'tab-' + t.key" [attr.aria-selected]="tab() === t.key" [attr.aria-controls]="'panel-plataforma'"
+                  [attr.tabindex]="tab() === t.key ? 0 : -1" (click)="tab.set(t.key)"
+                  class="inline-flex min-h-[38px] items-center gap-2 rounded-lg px-3 text-[13px] transition-colors"
+                  [class]="tab() === t.key ? 'bg-accent font-semibold text-accent-ink' : 'text-ink-2 hover:text-ink'">
+            <app-icon [name]="t.icon" [size]="13" /> {{ t.label }}
+          </button>
+        }
+      </div>
+    </div>
+    <div id="panel-plataforma" role="tabpanel" [attr.aria-labelledby]="'tab-' + tab()">
+      <div class="shelf" role="list" aria-label="Jogos da plataforma">
+        @for (g of byFamily(); track g.slug) { <div role="listitem"><app-game-card [game]="g" /></div> }
+      </div>
+      <a routerLink="/jogos" [queryParams]="{ plataforma: tab() }" class="mt-2 inline-flex items-center gap-2 text-[13px] text-ink-2 hover:text-accent">
+        Ver todos os jogos de {{ tab() === 'pc' ? 'PC' : tab() === 'playstation' ? 'PlayStation' : tab() === 'xbox' ? 'Xbox' : 'Nintendo' }} <app-icon name="arrow-right" [size]="14" />
+      </a>
+    </div>
+  </section>
+
+  <section class="cv" aria-labelledby="sh-gift" reveal>
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow">Presenteie</p>
+        <h2 id="sh-gift" class="h2 mt-2.5 text-[24px] sm:text-[30px]">Gift Cards</h2>
+      </div>
+      <a routerLink="/gift-cards" class="btn btn-ghost !min-h-[40px] !px-3 text-[13px]">Ver todos <app-icon name="arrow-right" [size]="15" /></a>
+    </div>
+    <ul class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      @for (c of gifts; track c.slug) {
+        <li class="stretch lift">
+          <app-gift-visual [family]="c.family" />
+          <h3 class="mt-3 text-[14px] font-medium"><a class="stretch-link" routerLink="/gift-cards" [fragment]="c.slug">{{ c.name }}</a></h3>
+          <p class="text-[13px] text-ink-2">de R$ {{ giftFrom(c.values) }} a R$ {{ c.values[c.values.length - 1] }}</p>
+        </li>
+      }
+    </ul>
+  </section>
+
+  <section class="cv" aria-labelledby="sh-hw" reveal>
+    <div class="mb-6 flex items-end justify-between gap-4">
+      <div>
+        <p class="eyebrow">Hardware · entrega simulada</p>
+        <h2 id="sh-hw" class="h2 mt-2.5 text-[24px] sm:text-[30px]">Consoles</h2>
+      </div>
+      <a routerLink="/consoles" class="btn btn-ghost !min-h-[40px] !px-3 text-[13px]">Ver todos <app-icon name="arrow-right" [size]="15" /></a>
+    </div>
+    <ul class="shelf lg:!grid-cols-5 lg:!grid-flow-row" aria-label="Consoles em destaque">
+      @for (h of hardware; track h.slug) {
+        <li class="stretch lift card overflow-hidden !rounded-[14px]">
+          <div class="dotgrid aspect-[4/3] bg-well p-4"><app-hw-art [art]="h.art" [accent]="h.slug.includes('zelda')" [label]="'Ilustração: ' + h.name" /></div>
+          <div class="p-3.5">
+            <h3 class="text-[14px] font-medium leading-snug clamp-2 min-h-[2.6em]"><a class="stretch-link" routerLink="/consoles" [fragment]="h.slug">{{ h.name }}</a></h3>
+            <p class="mt-1.5 text-[15px] font-semibold">{{ brl(h.price * (1 - (h.off ?? 0) / 100)) }}</p>
+          </div>
+        </li>
+      }
+    </ul>
+  </section>
+</div>

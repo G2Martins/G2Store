@@ -1,0 +1,2597 @@
+[
+ {
+  "igdb": 52189,
+  "igdbSlug": "grand-theft-auto-vi",
+  "name": "Grand Theft Auto VI",
+  "cover": "cocv1v",
+  "screenshots": [
+   "sc166fv",
+   "scwpqj",
+   "sc166fu",
+   "sc166fw",
+   "scpsp8",
+   "sc10vlr",
+   "sc10vls",
+   "sc10vlt"
+  ],
+  "artworks": [
+   "ar6w51",
+   "ar6w52",
+   "ar6w53",
+   "ar6w54"
+  ],
+  "genres": [
+   "Shooter",
+   "Racing",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Comedy",
+   "Sandbox",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Rockstar North",
+   "Rockstar Games"
+  ],
+  "publishers": [
+   "Rockstar Games",
+   "Take-Two Interactive"
+  ],
+  "released": "2026-11-19",
+  "releases": {
+   "ps5": "2026-11-19",
+   "xsx": "2026-11-19"
+  },
+  "classInd": "18",
+  "score": null,
+  "videos": [
+   {
+    "id": "QdBZY2fkU-0",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "VQRLujxTm3c",
+    "name": "Release Date Trailer"
+   },
+   {
+    "id": "tJbzMqJGH4k",
+    "name": "Gameplay Video"
+   }
+  ]
+ },
+ {
+  "igdb": 405460,
+  "igdbSlug": "the-legend-of-zelda-ocarina-of-time--1",
+  "name": "The Legend of Zelda: Ocarina of Time",
+  "cover": "cocv5r",
+  "screenshots": [
+   "sc153eu",
+   "sc13qrq",
+   "sc153ew",
+   "sc153ev",
+   "sc153ex",
+   "sc153et"
+  ],
+  "artworks": [
+   "ar6knj",
+   "ar6zby",
+   "ar6zbx",
+   "ar627t"
+  ],
+  "genres": [
+   "Puzzle",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 3"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2026-11-05",
+  "releases": {
+   "switch2": "2026-11-05"
+  },
+  "classInd": "10",
+  "score": 93,
+  "videos": [
+   {
+    "id": "wuFfiTEr2yc",
+    "name": "Trailer"
+   },
+   {
+    "id": "r8eMoxo4ipE",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "PQvD3p2yGwc",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 168667,
+  "igdbSlug": "marvels-wolverine",
+  "name": "Marvel's Wolverine",
+  "cover": "cob5mk",
+  "screenshots": [
+   "scfehk",
+   "sc104gl",
+   "sc104gn",
+   "sc104go",
+   "sc104gm",
+   "sc104gk"
+  ],
+  "artworks": [
+   "ar6b5e",
+   "ar12pz",
+   "ar5z8e",
+   "ar5z88"
+  ],
+  "genres": [
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Stealth",
+   "Drama"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Insomniac Games"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2026-09-15",
+  "releases": {
+   "ps5": "2026-09-15"
+  },
+  "classInd": "18",
+  "score": 81,
+  "videos": [
+   {
+    "id": "rJrqHyojaa4",
+    "name": "Trailer"
+   },
+   {
+    "id": "s3pDMUWlA6I",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "oBib2xkYfE4",
+    "name": "Dev Diary"
+   }
+  ]
+ },
+ {
+  "igdb": 305160,
+  "igdbSlug": "gears-of-war-e-day",
+  "name": "Gears of War: E-Day",
+  "cover": "coc77n",
+  "screenshots": [
+   "scsoft",
+   "scsofq",
+   "scsofu",
+   "scsofx",
+   "scsofs",
+   "scsofw",
+   "scsofr",
+   "scsofv"
+  ],
+  "artworks": [
+   "ar6hoa",
+   "ar2ziw"
+  ],
+  "genres": [
+   "Shooter",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "The Coalition"
+  ],
+  "publishers": [
+   "Xbox Game Studios"
+  ],
+  "released": "2026-10-06",
+  "releases": {
+   "pc": "2026-10-06",
+   "xsx": "2026-10-06"
+  },
+  "classInd": "18",
+  "score": 79,
+  "videos": [
+   {
+    "id": "EC20gLfUHeA",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "TOEuNKz3XW8",
+    "name": "Launch Trailer"
+   },
+   {
+    "id": "y85lNvF3kVQ",
+    "name": "Gameplay Video"
+   }
+  ]
+ },
+ {
+  "igdb": 92550,
+  "igdbSlug": "fable--1",
+  "name": "Fable",
+  "cover": "cobc6d",
+  "screenshots": [
+   "scsoet",
+   "scsoeu",
+   "scsoew",
+   "scsoev",
+   "scsoez",
+   "scsoex",
+   "scsoey",
+   "sc13q2e"
+  ],
+  "artworks": [
+   "ar2ziv",
+   "ar558t",
+   "ar558s"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Playground Games"
+  ],
+  "publishers": [
+   "Xbox Game Studios"
+  ],
+  "released": "2027-02-23",
+  "releases": {
+   "pc": "2027-02-23",
+   "ps5": "2027-02-23",
+   "xsx": "2027-02-23"
+  },
+  "classInd": "16",
+  "score": null,
+  "videos": [
+   {
+    "id": "oVkSZXPklQ4",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "PEQRwpMYPaw",
+    "name": "Trailer"
+   },
+   {
+    "id": "2FiBmVBaY0g",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 141114,
+  "igdbSlug": "007-first-light",
+  "name": "007 First Light",
+  "cover": "coaoiz",
+  "screenshots": [
+   "scx79u",
+   "scx79v",
+   "scyx6q",
+   "scyx6r",
+   "scx79w",
+   "scz0hs",
+   "scx79x",
+   "scz0ht"
+  ],
+  "artworks": [
+   "ar3n69",
+   "ar5pnm",
+   "ar44ue",
+   "ar3n6k"
+  ],
+  "genres": [
+   "Shooter",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Stealth"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "IO Interactive"
+  ],
+  "publishers": [
+   "IO Interactive"
+  ],
+  "released": "2026-05-27",
+  "releases": {
+   "pc": "2026-05-27",
+   "ps5": "2026-05-27",
+   "switch2": "2027-03-18",
+   "xsx": "2026-05-27"
+  },
+  "classInd": "14",
+  "score": 82,
+  "videos": [
+   {
+    "id": "slAhuh21ii8",
+    "name": "Teaser"
+   },
+   {
+    "id": "slJyjjPro7E",
+    "name": "Trailer"
+   },
+   {
+    "id": "i-fgtpwEMPM",
+    "name": "Announcement Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 347668,
+  "igdbSlug": "resident-evil-requiem",
+  "name": "Resident Evil Requiem",
+  "cover": "cobmj0",
+  "screenshots": [
+   "scx9r1",
+   "sc10tjs",
+   "sc10tnu",
+   "sc10tnv",
+   "sc10tnw",
+   "sc10tnx",
+   "sc10tny",
+   "sc10tnz"
+  ],
+  "artworks": [
+   "ar4v90",
+   "ar5h87",
+   "ar5qdo",
+   "ar3otk"
+  ],
+  "genres": [
+   "Shooter",
+   "Puzzle",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Horror",
+   "Survival"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Capcom Development Division 1"
+  ],
+  "publishers": [
+   "Capcom"
+  ],
+  "released": "2026-02-27",
+  "releases": {
+   "pc": "2026-02-27",
+   "ps5": "2026-02-27",
+   "switch2": "2026-02-27",
+   "xsx": "2026-02-27"
+  },
+  "classInd": "18",
+  "score": 90,
+  "videos": [
+   {
+    "id": "POz1-EmLsTY",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "-hiC3qpghP0",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "yh7TVa8yUf8",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 348330,
+  "igdbSlug": "forza-horizon-6",
+  "name": "Forza Horizon 6",
+  "cover": "cobc5n",
+  "screenshots": [
+   "sc11fdi",
+   "sc11fdj",
+   "sc11fdk",
+   "sc11fdl",
+   "sc11fdp",
+   "sc11fdn",
+   "sc11fdq",
+   "sc11fdo"
+  ],
+  "artworks": [
+   "ar5vr3",
+   "ar4ami",
+   "ar4amh",
+   "ar5jzd"
+  ],
+  "genres": [
+   "Racing",
+   "Simulator",
+   "Sport",
+   "Arcade"
+  ],
+  "themes": [
+   "Action",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Playground Games"
+  ],
+  "publishers": [
+   "Xbox Game Studios"
+  ],
+  "released": "2026-05-19",
+  "releases": {
+   "pc": "2026-05-19",
+   "ps5": "2027-01-26",
+   "xsx": "2026-05-19"
+  },
+  "classInd": "L",
+  "score": 86,
+  "videos": [
+   {
+    "id": "VXedKqX5Wa4",
+    "name": "Teaser"
+   },
+   {
+    "id": "pWw-UENvdTw",
+    "name": "Trailer"
+   },
+   {
+    "id": "oYhaW-Vr4wg",
+    "name": "Launch Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 375232,
+  "igdbSlug": "halo-campaign-evolved",
+  "name": "Halo: Campaign Evolved",
+  "cover": "coaqxe",
+  "screenshots": [
+   "sc13pnd",
+   "sc13pne",
+   "sc13pnf",
+   "sc13pnh",
+   "sc13pni",
+   "sc13pnj",
+   "sc13pnk",
+   "sc13pnl"
+  ],
+  "artworks": [
+   "ar614q",
+   "ar6b48",
+   "ar6b49",
+   "ar6b46"
+  ],
+  "genres": [
+   "Shooter",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Warfare"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Halo Studios"
+  ],
+  "publishers": [
+   "Xbox Game Studios"
+  ],
+  "released": "2026-07-28",
+  "releases": {
+   "pc": "2026-07-28",
+   "ps5": "2026-07-28",
+   "xsx": "2026-07-28"
+  },
+  "classInd": "16",
+  "score": 79,
+  "videos": [
+   {
+    "id": "e-tXi1NC_aU",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "efThjRym-ks",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "hSjbIM0iegY",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 325602,
+  "igdbSlug": "onimusha-way-of-the-sword",
+  "name": "Onimusha: Way of the Sword",
+  "cover": "cocdt3",
+  "screenshots": [
+   "scus45",
+   "scus43",
+   "scus47",
+   "scus44",
+   "scus46"
+  ],
+  "artworks": [
+   "ar5zgh",
+   "ar6qav",
+   "ar6qas",
+   "ar6qat"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Capcom"
+  ],
+  "publishers": [
+   "Capcom"
+  ],
+  "released": "2026-09-04",
+  "releases": {
+   "pc": "2026-09-04",
+   "ps5": "2026-09-04",
+   "switch2": "2026-09-04",
+   "xsx": "2026-09-04"
+  },
+  "classInd": "18",
+  "score": 86,
+  "videos": [
+   {
+    "id": "QiLgq9b_62s",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "W9Ct29FeMak",
+    "name": "Trailer"
+   },
+   {
+    "id": "9xQa_iW958E",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 317627,
+  "igdbSlug": "ghost-of-yotei",
+  "name": "Ghost of Yotei",
+  "cover": "co9coo",
+  "screenshots": [
+   "sctzwq",
+   "sctzwr",
+   "sctzws",
+   "sctzwt",
+   "sctzwu",
+   "sctzww",
+   "scwk6i",
+   "scwk6m"
+  ],
+  "artworks": [
+   "ar4u71",
+   "ar3o0e",
+   "ar3o0f",
+   "ar3o0g"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Historical",
+   "Stealth",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Sucker Punch Productions"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2025-10-02",
+  "releases": {
+   "ps5": "2025-10-02"
+  },
+  "classInd": "18",
+  "score": 88,
+  "videos": [
+   {
+    "id": "7z7kqwuf0a8",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "PVBLJYjSAhg",
+    "name": "Release Date Trailer"
+   },
+   {
+    "id": "qRiTEkU3Utg",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 331215,
+  "igdbSlug": "saros",
+  "name": "Saros",
+  "cover": "coajye",
+  "screenshots": [
+   "sc104fl",
+   "sc104fk",
+   "sc104fm",
+   "sc104fq",
+   "sc104fp",
+   "sc104fn",
+   "sc104fo"
+  ],
+  "artworks": [
+   "ar5rcv",
+   "ar5pxb",
+   "ar5pxc",
+   "ar5pxd"
+  ],
+  "genres": [
+   "Shooter"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Horror"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Housemarque"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2026-04-30",
+  "releases": {
+   "ps5": "2026-04-30"
+  },
+  "classInd": "12",
+  "score": 85,
+  "videos": [
+   {
+    "id": "rK4W-hBrSZs",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "XtCS5tuvCKs",
+    "name": "Release Date Trailer"
+   },
+   {
+    "id": "3EiDG8ZS1Vw",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 366893,
+  "igdbSlug": "pokemon-pokopia",
+  "name": "Pokémon Pokopia",
+  "cover": "cobbur",
+  "screenshots": [
+   "scz3wg",
+   "scz3wh"
+  ],
+  "artworks": [
+   "ar5ijo",
+   "ar5myb",
+   "ar47g2"
+  ],
+  "genres": [
+   "Simulator",
+   "Adventure"
+  ],
+  "themes": [
+   "Sandbox"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Omega Force",
+   "Game Freak"
+  ],
+  "publishers": [
+   "Nintendo",
+   "The Pokémon Company"
+  ],
+  "released": "2026-03-05",
+  "releases": {
+   "switch2": "2026-03-05"
+  },
+  "classInd": "L",
+  "score": 87,
+  "videos": [
+   {
+    "id": "6_bYri9p1Uk",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "HltHYt_3sUs",
+    "name": "Trailer"
+   },
+   {
+    "id": "rR_4nsCu-IA",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 338067,
+  "igdbSlug": "mario-kart-world",
+  "name": "Mario Kart World",
+  "cover": "cob9s9",
+  "screenshots": [
+   "scz96m",
+   "scz96h",
+   "scw2xo",
+   "scz96i",
+   "scz96k",
+   "scw2xm",
+   "scz96j",
+   "scw2xk"
+  ],
+  "artworks": [
+   "ar4973",
+   "ar4976",
+   "ar4977",
+   "ar4975"
+  ],
+  "genres": [
+   "Racing",
+   "Adventure"
+  ],
+  "themes": [
+   "Fantasy",
+   "Open world",
+   "Party"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Split screen"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 9"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2025-06-05",
+  "releases": {
+   "switch2": "2025-06-05"
+  },
+  "classInd": "L",
+  "score": 85,
+  "videos": [
+   {
+    "id": "3pE23YTYEZM",
+    "name": "Trailer"
+   },
+   {
+    "id": "mq4uCJDwO9U",
+    "name": "Gameplay Video"
+   },
+   {
+    "id": "NWjkbAQOGY8",
+    "name": "Dev Diary"
+   }
+  ]
+ },
+ {
+  "igdb": 338106,
+  "igdbSlug": "donkey-kong-bananza",
+  "name": "Donkey Kong Bananza",
+  "cover": "cobd1q",
+  "screenshots": [
+   "scw2wn",
+   "scw2wo",
+   "scw2wp",
+   "scw2wq",
+   "scw2wr"
+  ],
+  "artworks": [
+   "ar3eyk",
+   "ar3eyj",
+   "ar3eyl",
+   "ar3p7p"
+  ],
+  "genres": [
+   "Platform",
+   "Adventure"
+  ],
+  "themes": [
+   "Action"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 8"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2025-07-17",
+  "releases": {
+   "switch2": "2025-07-17"
+  },
+  "classInd": "L",
+  "score": 91,
+  "videos": [
+   {
+    "id": "LOvkfpenFtg",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "Z6faq_QW_U8",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "mIddsPkdX9U",
+    "name": "Announcement Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 37136,
+  "igdbSlug": "metroid-prime-4-beyond",
+  "name": "Metroid Prime 4: Beyond",
+  "cover": "cob9xh",
+  "screenshots": [
+   "scssmm",
+   "scssmk",
+   "scssml",
+   "scssmn",
+   "scssmo",
+   "sctr39"
+  ],
+  "artworks": [
+   "ar30l9"
+  ],
+  "genres": [
+   "Shooter",
+   "Platform",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 6",
+   "Retro Studios"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2025-12-04",
+  "releases": {
+   "switch": "2025-12-04",
+   "switch2": "2025-12-04"
+  },
+  "classInd": "14",
+  "score": 80,
+  "videos": [
+   {
+    "id": "mMAgmdR8jwU",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "nFbDmTjS_MI",
+    "name": "Teaser"
+   },
+   {
+    "id": "nmwAhBxakw4",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 288327,
+  "igdbSlug": "pokemon-legends-z-a",
+  "name": "Pokémon Legends: Z-A",
+  "cover": "co9wzc",
+  "screenshots": [
+   "scvsqj",
+   "scvsqg",
+   "scvsqi",
+   "scvsqk",
+   "scvsql",
+   "scvsqh",
+   "scvsqf"
+  ],
+  "artworks": [
+   "ar3m7o",
+   "ar3vlb"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer"
+  ],
+  "developers": [
+   "Game Freak"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2025-10-16",
+  "releases": {
+   "switch": "2025-10-16",
+   "switch2": "2025-10-16"
+  },
+  "classInd": "L",
+  "score": 75,
+  "videos": [
+   {
+    "id": "3VH7kQgM4Mo",
+    "name": "Trailer"
+   },
+   {
+    "id": "M_KNDtKJJ-8",
+    "name": "Trailer"
+   },
+   {
+    "id": "tezs2FsIxgA",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 115289,
+  "igdbSlug": "hollow-knight-silksong",
+  "name": "Hollow Knight: Silksong",
+  "cover": "cobebu",
+  "screenshots": [
+   "sc63aa",
+   "sc63a9",
+   "sc63ab",
+   "sc63a8",
+   "sc63ac",
+   "sc63a7"
+  ],
+  "artworks": [
+   "ar4prh",
+   "ar4pri",
+   "ar4prf",
+   "ar667n"
+  ],
+  "genres": [
+   "Platform",
+   "Adventure",
+   "Indie"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Team Cherry"
+  ],
+  "publishers": [
+   "Team Cherry"
+  ],
+  "released": "2025-09-04",
+  "releases": {
+   "pc": "2025-09-04",
+   "ps4": "2025-09-04",
+   "ps5": "2025-09-04",
+   "switch": "2025-09-04",
+   "switch2": "2025-09-04",
+   "xone": "2025-09-04",
+   "xsx": "2025-09-04"
+  },
+  "classInd": "12",
+  "score": 91,
+  "videos": [
+   {
+    "id": "pFAknD_9U7c",
+    "name": "Hollow Knight: Silksong Reveal Trailer"
+   },
+   {
+    "id": "JSfuFlhsxZY",
+    "name": "Trailer"
+   },
+   {
+    "id": "6XGeJwsUP9c",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 305152,
+  "igdbSlug": "clair-obscur-expedition-33",
+  "name": "Clair Obscur: Expedition 33",
+  "cover": "co9gam",
+  "screenshots": [
+   "scsoe2",
+   "scsoec",
+   "scsoe7",
+   "scsoee",
+   "scsoef",
+   "scsoe8",
+   "scsodz",
+   "scsoeg"
+  ],
+  "artworks": [
+   "ar3nmf",
+   "ar667p",
+   "ar667q",
+   "ar6hg4"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Turn-based strategy (TBS)",
+   "Adventure",
+   "Indie"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Sandfall Interactive"
+  ],
+  "publishers": [
+   "Kepler Interactive"
+  ],
+  "released": "2025-04-24",
+  "releases": {
+   "pc": "2025-04-24",
+   "ps5": "2025-04-24",
+   "xsx": "2025-04-24"
+  },
+  "classInd": "18",
+  "score": 89,
+  "videos": [
+   {
+    "id": "ejgW-upPMgk",
+    "name": "Launch Trailer"
+   },
+   {
+    "id": "o9KQ4rlymEQ",
+    "name": "Reveal Trailer"
+   },
+   {
+    "id": "ykQuuDwKRpo",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 317407,
+  "igdbSlug": "battlefield-6",
+  "name": "Battlefield 6",
+  "cover": "coa5zt",
+  "screenshots": [
+   "sczde5",
+   "scy45j",
+   "scy45k",
+   "scy45l",
+   "scy45m",
+   "scy45n",
+   "scy45o",
+   "scy45p"
+  ],
+  "artworks": [
+   "ar3vs1",
+   "ar3vs2",
+   "ar3vs0",
+   "ar5jzg"
+  ],
+  "genres": [
+   "Shooter"
+  ],
+  "themes": [
+   "Action",
+   "Warfare"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer"
+  ],
+  "developers": [
+   "EA Digital Illusions CE"
+  ],
+  "publishers": [
+   "Electronic Arts"
+  ],
+  "released": "2025-10-10",
+  "releases": {
+   "pc": "2025-10-10",
+   "ps5": "2025-10-10",
+   "xsx": "2025-10-10"
+  },
+  "classInd": "14",
+  "score": 79,
+  "videos": [
+   {
+    "id": "LqWVp3p-FPk",
+    "name": "Launch Hype Trailer"
+   },
+   {
+    "id": "pgNCgJG0vnY",
+    "name": "Trailer"
+   },
+   {
+    "id": "wFGEMfyAQtI",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 353848,
+  "igdbSlug": "ea-sports-fc-26",
+  "name": "EA Sports FC 26",
+  "cover": "coa5wx",
+  "screenshots": [
+   "scxztw",
+   "scxztx",
+   "scxztu",
+   "scxztt",
+   "scxzts",
+   "scxztr",
+   "scxzty",
+   "scxztz"
+  ],
+  "artworks": [
+   "ar671v",
+   "ar6dul"
+  ],
+  "genres": [
+   "Simulator",
+   "Sport"
+  ],
+  "themes": [
+   "Non-fiction"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "EA Vancouver"
+  ],
+  "publishers": [
+   "EA Sports"
+  ],
+  "released": "2025-09-26",
+  "releases": {
+   "pc": "2025-09-26",
+   "ps4": "2025-09-26",
+   "ps5": "2025-09-26",
+   "switch": "2025-09-26",
+   "switch2": "2025-09-26",
+   "xone": "2025-09-26",
+   "xsx": "2025-09-26"
+  },
+  "classInd": "L",
+  "score": 65,
+  "videos": [
+   {
+    "id": "TSi0iJYSQ24",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "0GE8YCIQF2M",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "8hWLWuJwAr8",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 348220,
+  "igdbSlug": "call-of-duty-black-ops-7",
+  "name": "Call of Duty: Black Ops 7",
+  "cover": "co9xwv",
+  "screenshots": [
+   "scyn2l",
+   "scyn2m",
+   "scyn2k",
+   "scyn2n"
+  ],
+  "artworks": [
+   "ar63aw",
+   "ar63au",
+   "ar63av"
+  ],
+  "genres": [
+   "Shooter"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Warfare"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Treyarch",
+   "Raven Software"
+  ],
+  "publishers": [
+   "Activision"
+  ],
+  "released": "2025-11-14",
+  "releases": {
+   "pc": "2025-11-14",
+   "ps4": "2025-11-14",
+   "ps5": "2025-11-14",
+   "xone": "2025-11-14",
+   "xsx": "2025-11-14"
+  },
+  "classInd": "18",
+  "score": 53,
+  "videos": [
+   {
+    "id": "dZdRDyYGoQg",
+    "name": "Teaser"
+   },
+   {
+    "id": "9txkGBj_trg",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "OzY-IhW45DY",
+    "name": "Dev Diary"
+   }
+  ]
+ },
+ {
+  "igdb": 119133,
+  "igdbSlug": "elden-ring",
+  "name": "Elden Ring",
+  "cover": "co4jni",
+  "screenshots": [
+   "scagdo",
+   "scu5kw",
+   "scu5kx",
+   "scf2s1",
+   "scagdq",
+   "scagdr",
+   "scagds",
+   "scagdm"
+  ],
+  "artworks": [
+   "ar3m1o",
+   "ar3m1p",
+   "ar1481",
+   "ar3m1n"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "FromSoftware"
+  ],
+  "publishers": [
+   "Bandai Namco Entertainment",
+   "FromSoftware"
+  ],
+  "released": "2022-02-25",
+  "releases": {
+   "pc": "2022-02-25",
+   "ps4": "2022-02-25",
+   "ps5": "2022-02-25",
+   "switch2": "2026-08-28",
+   "xone": "2022-02-25",
+   "xsx": "2022-02-25"
+  },
+  "classInd": "16",
+  "score": 95,
+  "videos": [
+   {
+    "id": "D1mDo1CEMuE",
+    "name": "Trailer"
+   },
+   {
+    "id": "E3Huy2cdih0",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "qqiC88f9ogU",
+    "name": "Launch Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 279661,
+  "igdbSlug": "monster-hunter-wilds",
+  "name": "Monster Hunter Wilds",
+  "cover": "co904o",
+  "screenshots": [
+   "scqcr5",
+   "scqcr8",
+   "scqcr7",
+   "scqcr6",
+   "scqcr4",
+   "scqcrc",
+   "scqcr3",
+   "scqcra"
+  ],
+  "artworks": [
+   "ar2q59"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Capcom"
+  ],
+  "publishers": [
+   "Capcom"
+  ],
+  "released": "2025-02-28",
+  "releases": {
+   "pc": "2025-02-28",
+   "ps5": "2025-02-28",
+   "switch2": "2026-12-04",
+   "xsx": "2025-02-28"
+  },
+  "classInd": "12",
+  "score": 85,
+  "videos": [
+   {
+    "id": "O3syM4tV8Xw",
+    "name": "Trailer"
+   },
+   {
+    "id": "URG75CDX_rg",
+    "name": "Trailer"
+   },
+   {
+    "id": "qsw5lB5n7Qw",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 134612,
+  "igdbSlug": "pragmata",
+  "name": "Pragmata",
+  "cover": "cobxnx",
+  "screenshots": [
+   "sc8bl9",
+   "sc8bla",
+   "sc8bhe",
+   "sc8blb",
+   "sc8bhf",
+   "sc8blc"
+  ],
+  "artworks": [
+   "ar5c05",
+   "ar5c04",
+   "ar5c03",
+   "ar5pyf"
+  ],
+  "genres": [
+   "Shooter",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Capcom"
+  ],
+  "publishers": [
+   "Capcom"
+  ],
+  "released": "2026-04-17",
+  "releases": {
+   "pc": "2026-04-17",
+   "ps5": "2026-04-17",
+   "switch2": "2026-04-17",
+   "xsx": "2026-04-17"
+  },
+  "classInd": "12",
+  "score": 87,
+  "videos": [
+   {
+    "id": "0FTq_snLzIw",
+    "name": "Trailer"
+   },
+   {
+    "id": "7Qe2rzT0hZ8",
+    "name": "Trailer"
+   },
+   {
+    "id": "8-N5fYjhQO8",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 228530,
+  "igdbSlug": "death-stranding-2-on-the-beach",
+  "name": "Death Stranding 2: On the Beach",
+  "cover": "co9ipx",
+  "screenshots": [
+   "scka9g",
+   "scqbvm",
+   "scqbvn",
+   "scqbvo",
+   "scqbvp",
+   "scqbvs",
+   "scka9e",
+   "scka9j"
+  ],
+  "artworks": [
+   "ar6aro",
+   "ar3me9"
+  ],
+  "genres": [
+   "Shooter",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Horror",
+   "Stealth",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Kojima Productions"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment",
+   "Kojima Productions"
+  ],
+  "released": "2025-06-26",
+  "releases": {
+   "pc": "2026-03-19",
+   "ps5": "2025-06-26"
+  },
+  "classInd": "18",
+  "score": 91,
+  "videos": [
+   {
+    "id": "WOmTBfDD6a4",
+    "name": "Teaser"
+   },
+   {
+    "id": "wbLstJHlC4U",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "eT_A2gPhTIw",
+    "name": "Release Date Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 127044,
+  "igdbSlug": "marvels-spider-man-2",
+  "name": "Marvel's Spider-Man 2",
+  "cover": "cobg1k",
+  "screenshots": [
+   "scmwdi",
+   "scmwdk",
+   "scmwdl",
+   "scmwdm",
+   "scoq3o",
+   "scoq3p",
+   "scfeho",
+   "scfehp"
+  ],
+  "artworks": [
+   "ar2d8r",
+   "ar4uyy",
+   "ar4uyx"
+  ],
+  "genres": [
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Stealth",
+   "Drama",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Insomniac Games"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2023-10-20",
+  "releases": {
+   "pc": "2025-01-30",
+   "ps5": "2023-10-20"
+  },
+  "classInd": "12",
+  "score": 83,
+  "videos": [
+   {
+    "id": "yF60tx4GfN0",
+    "name": "Cinematic Trailer"
+   },
+   {
+    "id": "qIQ3xNqkVC4",
+    "name": "Trailer"
+   },
+   {
+    "id": "XrPZSq5YXqc",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 112875,
+  "igdbSlug": "god-of-war-ragnarok",
+  "name": "God of War Ragnarök",
+  "cover": "coba3d",
+  "screenshots": [
+   "scd71x",
+   "scd71v",
+   "scd71z",
+   "scd720",
+   "scd71w",
+   "scd71y"
+  ],
+  "artworks": [
+   "ar3tqf",
+   "ar6682",
+   "ar6683",
+   "ar1qdf"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Santa Monica Studio"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2022-11-09",
+  "releases": {
+   "pc": "2024-09-19",
+   "ps4": "2022-11-09",
+   "ps5": "2022-11-09"
+  },
+  "classInd": "18",
+  "score": 93,
+  "videos": [
+   {
+    "id": "EE-4GvjKcfs",
+    "name": "Trailer"
+   },
+   {
+    "id": "g1wr0DfV73E",
+    "name": "Launch Trailer"
+   },
+   {
+    "id": "dIQGI36BxDE",
+    "name": "Cinematic Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 303811,
+  "igdbSlug": "astro-bot",
+  "name": "Astro Bot",
+  "cover": "coba3k",
+  "screenshots": [
+   "scsiqf",
+   "scsiqk",
+   "scsiqh",
+   "scsiqg",
+   "scsiqi",
+   "scsiqj"
+  ],
+  "artworks": [
+   "ar64mu",
+   "ar4u6y",
+   "ar3qeo"
+  ],
+  "genres": [
+   "Platform",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Team Asobi"
+  ],
+  "publishers": [
+   "Sony Interactive Entertainment"
+  ],
+  "released": "2024-09-06",
+  "releases": {
+   "ps5": "2024-09-06"
+  },
+  "classInd": "L",
+  "score": 92,
+  "videos": [
+   {
+    "id": "wHMNQzLG_Jg",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "unYFdcEjV9k",
+    "name": "Launch Trailer"
+   },
+   {
+    "id": "VV5cTl692po",
+    "name": "Accolades Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 119388,
+  "igdbSlug": "the-legend-of-zelda-tears-of-the-kingdom",
+  "name": "The Legend of Zelda: Tears of the Kingdom",
+  "cover": "co5vmg",
+  "screenshots": [
+   "scaoj8",
+   "scaoj9",
+   "scaoj7",
+   "scaoj6",
+   "sc6lnr"
+  ],
+  "artworks": [
+   "ar3m45",
+   "ar3m47",
+   "ar3m46",
+   "ar3m48"
+  ],
+  "genres": [
+   "Puzzle",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Science fiction",
+   "Sandbox",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 3"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2023-05-12",
+  "releases": {
+   "switch": "2023-05-12"
+  },
+  "classInd": "10",
+  "score": 94,
+  "videos": [
+   {
+    "id": "3fr1Z07AV00",
+    "name": "Trailer"
+   },
+   {
+    "id": "Pi-MRZBP91I",
+    "name": "Trailer"
+   },
+   {
+    "id": "2SNF4M_v7wc",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 109462,
+  "igdbSlug": "animal-crossing-new-horizons",
+  "name": "Animal Crossing: New Horizons",
+  "cover": "co3wls",
+  "screenshots": [
+   "sctl7m",
+   "sctl7n",
+   "sctl7o",
+   "sc836w",
+   "sc89a2",
+   "sc836u",
+   "sc836x",
+   "sc836v"
+  ],
+  "artworks": [
+   "ar6rw",
+   "ar6ru",
+   "ar6rv",
+   "ar4u73"
+  ],
+  "genres": [
+   "Simulator"
+  ],
+  "themes": [
+   "Sandbox",
+   "Kids",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative",
+   "Split screen"
+  ],
+  "developers": [
+   "Nintendo EPD Production Group No. 5"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2020-03-20",
+  "releases": {
+   "switch": "2020-03-20"
+  },
+  "classInd": "L",
+  "score": 86,
+  "videos": [
+   {
+    "id": "dEh3MPy4GAU",
+    "name": "Gameplay video"
+   },
+   {
+    "id": "9C5Lu4Ripco",
+    "name": "Trailer"
+   },
+   {
+    "id": "u9TY741PSh8",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 338105,
+  "igdbSlug": "kirby-air-riders",
+  "name": "Kirby Air Riders",
+  "cover": "coaauz",
+  "screenshots": [
+   "scw2wl",
+   "scyp5f",
+   "scyp5h",
+   "scyp5g"
+  ],
+  "artworks": [
+   "ar3eyu",
+   "ar4lzf",
+   "ar4lzj",
+   "ar4lzk"
+  ],
+  "genres": [
+   "Racing",
+   "Adventure",
+   "Arcade"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer"
+  ],
+  "developers": [
+   "Sora",
+   "Bandai Namco Studios"
+  ],
+  "publishers": [
+   "Nintendo"
+  ],
+  "released": "2025-11-20",
+  "releases": {
+   "switch2": "2025-11-20"
+  },
+  "classInd": "L",
+  "score": 89,
+  "videos": [
+   {
+    "id": "oJVsNMp_nAU",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "QtkHiB7WKf4",
+    "name": "Gameplay Video"
+   },
+   {
+    "id": "SJWif3ijbVI",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 96437,
+  "igdbSlug": "starfield",
+  "name": "Starfield",
+  "cover": "co39vv",
+  "screenshots": [
+   "ygiajg3ypevvmhoo0cea",
+   "tg9zupved8b6aroc0fob",
+   "schdmi",
+   "schdmk",
+   "schdmh",
+   "schdmj",
+   "scmlzk",
+   "scu1aj"
+  ],
+  "artworks": [
+   "ar91m",
+   "ar67ei"
+  ],
+  "genres": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Sandbox",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Bethesda Game Studios"
+  ],
+  "publishers": [
+   "Bethesda Softworks"
+  ],
+  "released": "2023-09-06",
+  "releases": {
+   "pc": "2023-09-06",
+   "ps5": "2026-04-07",
+   "xsx": "2023-09-06"
+  },
+  "classInd": "16",
+  "score": 78,
+  "videos": [
+   {
+    "id": "tvYuWDps7dE",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "oIC9yW1Gy3M",
+    "name": "Dev Diary"
+   },
+   {
+    "id": "JUobbpHERh8",
+    "name": "Teaser"
+   }
+  ]
+ },
+ {
+  "igdb": 142415,
+  "igdbSlug": "indiana-jones-and-the-great-circle",
+  "name": "Indiana Jones and the Great Circle",
+  "cover": "co7nbc",
+  "screenshots": [
+   "scq5sr",
+   "scq5ss",
+   "scq5su",
+   "scq5st",
+   "scq5sv",
+   "scq5sw"
+  ],
+  "artworks": [
+   "ar3qeq",
+   "ar3qer",
+   "ar3qev",
+   "ar3qet"
+  ],
+  "genres": [
+   "Puzzle",
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Historical",
+   "Stealth"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "MachineGames"
+  ],
+  "publishers": [
+   "Bethesda Softworks"
+  ],
+  "released": "2024-12-09",
+  "releases": {
+   "pc": "2024-12-09",
+   "ps5": "2025-04-17",
+   "switch2": "2026-05-12",
+   "xsx": "2024-12-09"
+  },
+  "classInd": "16",
+  "score": 88,
+  "videos": [
+   {
+    "id": "1CCQg4JEidM",
+    "name": "Teaser"
+   },
+   {
+    "id": "htGnW6YNPjs",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "Yp7_ImMV1Iw",
+    "name": "Dev Diary"
+   }
+  ]
+ },
+ {
+  "igdb": 1877,
+  "igdbSlug": "cyberpunk-2077",
+  "name": "Cyberpunk 2077",
+  "cover": "coaih8",
+  "screenshots": [
+   "vnv5cd9kvonsjvazpotx",
+   "quphnww1axg2mmsvxfux",
+   "scxw04",
+   "scxw02",
+   "ubbe5gewccx5ig3xy30t",
+   "c7usjg7gpo8rs0bfjkph",
+   "jmi4y3q12o4uitdcaf7i",
+   "w4plqrhe04byymfksmux"
+  ],
+  "artworks": [
+   "ig0frvvkkz4jx7cyqt3f",
+   "j3edunidfkbuivcingaw",
+   "pgrmxtckblxm3pfdu5hu",
+   "c6gonpyuhueh0eq38n8l"
+  ],
+  "genres": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Science fiction",
+   "Sandbox",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "CD Projekt RED"
+  ],
+  "publishers": [
+   "CD Projekt"
+  ],
+  "released": "2020-12-10",
+  "releases": {
+   "pc": "2020-12-10",
+   "ps4": "2020-12-10",
+   "ps5": "2022-02-15",
+   "switch2": "2025-06-05",
+   "xone": "2020-12-10",
+   "xsx": "2022-02-15"
+  },
+  "classInd": "18",
+  "score": 79,
+  "videos": [
+   {
+    "id": "vjF9GgrY9c0",
+    "name": "Gameplay Video"
+   },
+   {
+    "id": "FknHjl7eQ6o",
+    "name": "Deep Dive Video"
+   },
+   {
+    "id": "qIcTM8WXFjk",
+    "name": "E3 2019 Cinematic Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 25076,
+  "igdbSlug": "red-dead-redemption-2",
+  "name": "Red Dead Redemption 2",
+  "cover": "co1q1f",
+  "screenshots": [
+   "xegpfnsvlyeld0zkjnrc",
+   "kcfpf8wa8esalk0qkpo5",
+   "dorsz0jbcecmkxvzi3t8",
+   "mptosgjarjlyqxy7lqsm",
+   "sctkgq",
+   "tdxv4zzkqyjnm9pmwxw0",
+   "qg7gx276z3hsqlr9xpt6",
+   "h8f9uojkzvaau8pxsyxi"
+  ],
+  "artworks": [
+   "l0kjrldascktx2kzqhbi",
+   "m9ra5j7omj0gn554hkkg",
+   "ar667l",
+   "nqtsfctiapng5xcmozyk"
+  ],
+  "genres": [
+   "Shooter",
+   "Role-playing (RPG)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Drama",
+   "Open world"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "Rockstar Games"
+  ],
+  "publishers": [
+   "Take-Two Interactive",
+   "Rockstar Games"
+  ],
+  "released": "2018-10-26",
+  "releases": {
+   "pc": "2019-11-05",
+   "ps4": "2018-10-26",
+   "xone": "2018-10-26"
+  },
+  "classInd": "18",
+  "score": 94,
+  "videos": [
+   {
+    "id": "94B-38sX5fs",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "HVRzx17WHVk",
+    "name": "Launch Trailer"
+   },
+   {
+    "id": "Dw_oH5oiUSE",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 119171,
+  "igdbSlug": "baldurs-gate-iii",
+  "name": "Baldur's Gate III",
+  "cover": "co670h",
+  "screenshots": [
+   "sc81fj",
+   "scxvxn",
+   "scxvy0",
+   "scxvy1",
+   "sc81fh",
+   "sc81fe",
+   "sctm4z",
+   "scxtb7"
+  ],
+  "artworks": [
+   "ar3n2t",
+   "ar6j53",
+   "ar3tfx",
+   "ar3n2r"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Strategy",
+   "Turn-based strategy (TBS)",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative",
+   "Split screen"
+  ],
+  "developers": [
+   "Larian Studios"
+  ],
+  "publishers": [
+   "Larian Studios"
+  ],
+  "released": "2023-08-03",
+  "releases": {
+   "pc": "2020-10-06",
+   "ps5": "2023-09-06",
+   "xsx": "2023-12-08"
+  },
+  "classInd": "16",
+  "score": 95,
+  "videos": [
+   {
+    "id": "jNY7AEQ59-8",
+    "name": "Cinematic Trailer"
+   },
+   {
+    "id": "o5xpbAsly48",
+    "name": "Trailer"
+   },
+   {
+    "id": "tavPnYeFrV4",
+    "name": "Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 17000,
+  "igdbSlug": "stardew-valley",
+  "name": "Stardew Valley",
+  "cover": "coa93h",
+  "screenshots": [
+   "rhxs1x9w5hf5kde2osf5",
+   "iwswpvxa9ytrpk8yjcyx",
+   "sw7rtba7p1xs77klsime",
+   "ak7zmag7zztpqha1jjde",
+   "g1aakqbkp2quq0krqeky"
+  ],
+  "artworks": [
+   "ar4yuh",
+   "ar67dh",
+   "ar68v5",
+   "ar4yty"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Strategy",
+   "Adventure",
+   "Indie"
+  ],
+  "themes": [
+   "Fantasy",
+   "Business",
+   "Sandbox",
+   "Romance"
+  ],
+  "modes": [
+   "Single player",
+   "Multiplayer",
+   "Co-operative"
+  ],
+  "developers": [
+   "ConcernedApe"
+  ],
+  "publishers": [
+   "Chucklefish Games",
+   "ConcernedApe",
+   "505 Games"
+  ],
+  "released": "2016-02-26",
+  "releases": {
+   "pc": "2016-02-26",
+   "ps4": "2016-12-13",
+   "switch": "2017-10-05",
+   "switch2": "2025-12-25",
+   "xone": "2016-12-14"
+  },
+  "classInd": "10",
+  "score": 88,
+  "videos": [
+   {
+    "id": "ot7uXNQskhs",
+    "name": "Trailer"
+   },
+   {
+    "id": "pHUqhYslji4",
+    "name": "Trailer"
+   },
+   {
+    "id": "8A7A1X1TVNc",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 228525,
+  "igdbSlug": "hades-ii",
+  "name": "Hades II",
+  "cover": "coaknx",
+  "screenshots": [
+   "scka7e",
+   "scka7f",
+   "scka7g",
+   "scka7h",
+   "scka7i",
+   "scka7j"
+  ],
+  "artworks": [
+   "ar44rv",
+   "ar48mp",
+   "ar3ml1",
+   "ar47ko"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure",
+   "Indie"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Supergiant Games"
+  ],
+  "publishers": [
+   "Supergiant Games"
+  ],
+  "released": "2025-09-25",
+  "releases": {
+   "pc": "2024-05-06",
+   "ps5": "2026-04-14",
+   "switch": "2025-09-25",
+   "switch2": "2025-09-25",
+   "xsx": "2026-04-14"
+  },
+  "classInd": "14",
+  "score": 91,
+  "videos": [
+   {
+    "id": "WH3jT53hIYM",
+    "name": "Trailer"
+   },
+   {
+    "id": "l-iHDj3EwdI",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "Miu_akSity4",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 325594,
+  "igdbSlug": "split-fiction",
+  "name": "Split Fiction",
+  "cover": "co95gf",
+  "screenshots": [
+   "scus20",
+   "scus24",
+   "scus21",
+   "scus23",
+   "scus26",
+   "scus25",
+   "scus22",
+   "scus27"
+  ],
+  "artworks": [
+   "ar3me6",
+   "ar3mkt",
+   "ar3mku",
+   "ar3me7"
+  ],
+  "genres": [
+   "Platform",
+   "Puzzle",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy",
+   "Science fiction"
+  ],
+  "modes": [
+   "Multiplayer",
+   "Co-operative",
+   "Split screen"
+  ],
+  "developers": [
+   "Hazelight Studios"
+  ],
+  "publishers": [
+   "Electronic Arts"
+  ],
+  "released": "2025-03-06",
+  "releases": {
+   "pc": "2025-03-06",
+   "ps5": "2025-03-06",
+   "switch2": "2025-06-05",
+   "xsx": "2025-03-06"
+  },
+  "classInd": "14",
+  "score": 90,
+  "videos": [
+   {
+    "id": "vRDXNJJ5Y3c",
+    "name": "Trailer"
+   },
+   {
+    "id": "fcwngWPXQtg",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "0TlySOphMuo",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 298526,
+  "igdbSlug": "kingdom-come-deliverance-ii",
+  "name": "Kingdom Come: Deliverance II",
+  "cover": "co8qmv",
+  "screenshots": [
+   "scs1lj",
+   "scs1lk",
+   "scs1ln",
+   "scs1ll",
+   "scs1lm",
+   "scs1lo",
+   "sc151ff",
+   "sc151fg"
+  ],
+  "artworks": [
+   "ar3s9l",
+   "ar4wsl",
+   "ar3s9k"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Simulator",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Historical",
+   "Open world"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Warhorse Studios"
+  ],
+  "publishers": [
+   "Deep Silver"
+  ],
+  "released": "2025-02-04",
+  "releases": {
+   "pc": "2025-02-04",
+   "ps5": "2025-02-04",
+   "switch2": "2027",
+   "xsx": "2025-02-04"
+  },
+  "classInd": "18",
+  "score": 93,
+  "videos": [
+   {
+    "id": "q_WvHhlDRJ0",
+    "name": "Announcement Trailer"
+   },
+   {
+    "id": "utArRqtkd0Y",
+    "name": "Saints and Sinners Trailer"
+   },
+   {
+    "id": "j0p-DTyQ0Jw",
+    "name": "Gameplay Trailer"
+   }
+  ]
+ },
+ {
+  "igdb": 136879,
+  "igdbSlug": "black-myth-wukong",
+  "name": "Black Myth: Wukong",
+  "cover": "co8h3y",
+  "screenshots": [
+   "sc8i9c",
+   "sc8i9d",
+   "sc8i9e",
+   "scto8u",
+   "scto8t",
+   "sc8i9f",
+   "sc8i9g"
+  ],
+  "artworks": [
+   "ar4owr",
+   "ar4owl",
+   "ar4owq",
+   "ar4owk"
+  ],
+  "genres": [
+   "Role-playing (RPG)",
+   "Hack and slash/Beat 'em up",
+   "Adventure"
+  ],
+  "themes": [
+   "Action",
+   "Fantasy"
+  ],
+  "modes": [
+   "Single player"
+  ],
+  "developers": [
+   "Game Science"
+  ],
+  "publishers": [
+   "Game Science"
+  ],
+  "released": "2024-08-20",
+  "releases": {
+   "pc": "2024-08-20",
+   "ps5": "2024-08-20",
+   "xsx": "2025-08-20"
+  },
+  "classInd": "16",
+  "score": 88,
+  "videos": [
+   {
+    "id": "oRLhCxC886o",
+    "name": "Gameplay Trailer"
+   },
+   {
+    "id": "rPPwsqfoy0w",
+    "name": "Gameplay Video"
+   },
+   {
+    "id": "bJuLthUOssY",
+    "name": "Gameplay Video"
+   }
+  ]
+ }
+]

@@ -1,0 +1,239 @@
+@if (game(); as g) {
+  <!-- Key art band -->
+  <div class="pointer-events-none absolute inset-x-0 top-0 h-[480px] overflow-hidden" aria-hidden="true">
+    @if (g.artworks[0] || g.screenshots[0]; as art) {
+      <img [src]="img(art, 'screenshot_med')" [srcset]="img(art, 'screenshot_med') + ' 569w, ' + wideSet(art)" sizes="60vw" width="1920" height="1080"
+           class="h-full w-full object-cover opacity-35" alt="" />
+    }
+    <div class="absolute inset-0 bg-gradient-to-b from-[#050826]/30 via-[#050826]/70 to-[#050826]"></div>
+  </div>
+
+  <div class="wrap relative pt-8 sm:pt-10">
+    <nav aria-label="Trilha" class="font-mono text-[11px] uppercase tracking-[.12em] text-dim">
+      <a routerLink="/" class="hover:text-ink">Início</a> <span class="mx-1.5">/</span>
+      <a routerLink="/jogos" class="hover:text-ink">Jogos</a> <span class="mx-1.5">/</span>
+      <span class="text-ink-2">{{ g.name }}</span>
+    </nav>
+
+    <div class="mt-6 grid grid-cols-1 gap-x-10 gap-y-8 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <!-- Title block -->
+      <div class="flex gap-5 sm:gap-7">
+        @if (g.cover) {
+          <img [src]="img(g.cover, 'cover_big')" [srcset]="coverSet(g.cover)" sizes="(min-width: 640px) 200px, 120px" width="264" height="374"
+               class="materialize h-auto w-[120px] shrink-0 self-start rounded-[12px] border border-white/10 shadow-2xl shadow-black/50 sm:w-[200px]" fetchpriority="high" [alt]="'Capa de ' + g.name" />
+        }
+        <div class="min-w-0 pt-1">
+          <p class="eyebrow">{{ g.developers[0] }} · {{ g.released ? g.released.slice(0, 4) : 'TBA' }}</p>
+          <h1 class="h-display mt-3 text-[30px] sm:text-[46px] lg:text-[54px]"><span class="mask"><span class="rise">{{ g.name }}</span></span></h1>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            @for (o of options(); track o.family) {
+              @if (o.state !== 'none') {
+                <span class="tag"><app-icon [name]="o.icon" [size]="12" /> {{ o.label }}</span>
+              }
+            }
+            @for (t of g.tags ?? []; track t) { <span class="tag !text-accent">{{ t }}</span> }
+          </div>
+          <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-3">
+            @if (g.classInd) { <app-classind [rating]="g.classInd" /> }
+            @if (g.score) {
+              <span class="inline-flex items-center gap-2 text-[13px] text-ink-2">
+                <span class="grid h-[34px] min-w-[34px] place-items-center rounded-lg border border-line-2 px-1.5 font-mono text-[14px] font-medium text-ink">{{ g.score }}</span>
+                Nota da crítica e do público (IGDB)
+              </span>
+            }
+          </div>
+        </div>
+      </div>
+
+      <!-- Buy box -->
+      <aside class="self-start lg:sticky lg:top-32 lg:col-start-2 lg:row-span-3 lg:row-start-1" aria-label="Comprar">
+        <div class="card ticks p-5 sm:p-6">
+          <fieldset>
+            <legend class="eyebrow">1 · Plataforma</legend>
+            <div class="mt-3 grid grid-cols-2 gap-2">
+              @for (o of options(); track o.family) {
+                <label class="opt">
+                  <input type="radio" name="plataforma" [value]="o.family" [checked]="family() === o.family" [disabled]="!o.enabled"
+                         (change)="family.set(o.family)" [attr.aria-describedby]="'hint-' + o.family" />
+                  <span class="flex items-center gap-2 text-[14px] font-medium"><app-icon [name]="o.icon" [size]="14" /> {{ o.label }}</span>
+                  <span [id]="'hint-' + o.family" class="text-[11.5px] leading-snug" [class]="o.state === 'preorder' ? 'text-accent' : 'text-ink-2'">{{ o.hint }}</span>
+                </label>
+              }
+            </div>
+          </fieldset>
+
+          @if (family()) {
+            <fieldset class="mt-5">
+              <legend class="eyebrow">2 · Edição</legend>
+              <div class="mt-3 space-y-2">
+                @for (e of editions(); track e.name) {
+                  <label class="opt !flex-row !items-center !justify-between">
+                    <input type="radio" name="edicao" [checked]="edition() === e.name" (change)="edition.set(e.name)" />
+                    <span class="text-[14px]">{{ e.name }}</span>
+                    <span class="text-[14px] font-semibold">{{ brl(e.sale) }}</span>
+                  </label>
+                }
+              </div>
+            </fieldset>
+
+            <div class="mt-6 border-t border-line pt-5">
+              @if (price(); as p) {
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  @if (g.off) { <span class="off">-{{ g.off }}%</span> <span class="strike text-[14px]"><span class="sr-only">De </span>{{ brl(p.list) }}</span> }
+                  <span class="text-[34px] font-semibold leading-none tracking-tight">@if (g.off) {<span class="sr-only">por </span>}{{ brl(p.sale) }}</span>
+                </div>
+                @if (g.off) { <p class="mt-1.5 text-[12.5px] text-accent">Você economiza {{ brl(p.list - p.sale) }}</p> }
+              }
+              <p class="mt-2 text-[12.5px] text-ink-2">{{ current()?.store }} · código digital para {{ current()?.names }}</p>
+            </div>
+
+            @if (current()?.state === 'preorder' && current()?.launch; as launch) {
+              <div class="mt-5 rounded-xl border border-accent/30 bg-accent/[.06] p-4">
+                <p class="font-mono text-[10.5px] uppercase tracking-[.14em] text-accent">Pré-venda · código liberado em {{ dateBR(launch) }}</p>
+                <app-countdown class="mt-3" [to]="launch" />
+              </div>
+            }
+
+            <div class="mt-5 grid gap-2">
+              <button type="button" class="btn btn-primary w-full" (click)="buyNow()">
+                {{ current()?.state === 'preorder' ? 'Fazer pré-venda' : 'Comprar agora' }}
+              </button>
+              <div class="flex gap-2">
+                <button type="button" class="btn btn-line flex-1" (click)="add()"><app-icon name="bag" [size]="16" /> Adicionar ao carrinho</button>
+                <button type="button" class="btn btn-line !px-3.5" (click)="store.toggleWish(g.slug, g.name)" [attr.aria-pressed]="wished()"
+                        [attr.aria-label]="wished() ? 'Remover da lista de desejos' : 'Adicionar à lista de desejos'">
+                  <app-icon name="heart" [size]="17" [class.text-accent]="wished()" />
+                </button>
+              </div>
+            </div>
+          } @else {
+            <p class="mt-5 rounded-xl border border-line bg-well p-4 text-[14px] text-ink-2">Ainda sem data de lançamento confirmada. Adicione à lista de desejos para acompanhar.</p>
+            <button type="button" class="btn btn-line mt-3 w-full" (click)="store.toggleWish(g.slug, g.name)" [attr.aria-pressed]="wished()">
+              <app-icon name="heart" [size]="16" /> {{ wished() ? 'Na lista de desejos' : 'Adicionar à lista de desejos' }}
+            </button>
+          }
+          <p class="mt-4 flex items-start gap-2 text-[12px] leading-snug text-dim">
+            <app-icon name="info" [size]="14" class="mt-px" /> Simulação: nenhuma cobrança é feita e o código entregue é só de demonstração.
+          </p>
+        </div>
+      </aside>
+
+      <!-- Media, details -->
+      <div class="min-w-0 space-y-12">
+        @if (shots().length) {
+          <section aria-label="Galeria de imagens">
+            <button type="button" class="group relative block w-full overflow-hidden rounded-[14px] border border-line" (click)="open(shot())"
+                    [attr.aria-label]="'Ampliar imagem ' + (shot() + 1) + ' de ' + shots().length">
+              <img [src]="img(shots()[shot()], 'screenshot_big')" [srcset]="wideSet(shots()[shot()])" sizes="(min-width: 1024px) 760px, 100vw"
+                   width="889" height="500" class="aspect-video h-auto w-full object-cover" loading="lazy" [alt]="'Imagem ' + (shot() + 1) + ' de ' + g.name" />
+              <span class="absolute bottom-3 right-3 rounded-lg bg-[#050826]/80 px-2.5 py-1.5 font-mono text-[11px] text-ink-2 opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">Ampliar</span>
+            </button>
+            <div class="mt-3 grid grid-cols-4 gap-2 sm:grid-cols-6">
+              @for (s of shots().slice(0, 6); track s; let i = $index) {
+                <button type="button" class="overflow-hidden rounded-[9px] border-2 transition-colors" [class]="i === shot() ? 'border-accent' : 'border-transparent opacity-70 hover:opacity-100'"
+                        (click)="shot.set(i)" [attr.aria-label]="'Mostrar imagem ' + (i + 1)" [attr.aria-pressed]="i === shot()">
+                  <img [src]="img(s, 'screenshot_med')" width="569" height="320" class="aspect-video h-auto w-full object-cover" loading="lazy" alt="" />
+                </button>
+              }
+            </div>
+          </section>
+        }
+
+        @if (video(); as v) {
+          <section aria-labelledby="trailer-title">
+            <h2 id="trailer-title" class="eyebrow">Trailer</h2>
+            <div class="relative mt-4 aspect-video overflow-hidden rounded-[14px] border border-line bg-black">
+              @if (playing()) {
+                <iframe class="absolute inset-0 h-full w-full" [src]="embed()" [title]="v.name + ': ' + g.name"
+                        allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              } @else {
+                <button type="button" class="group absolute inset-0 w-full" (click)="playing.set(true)" [attr.aria-label]="'Assistir ' + v.name + ' de ' + g.name + ' (carrega o YouTube)'">
+                  @if (v.poster) { <img [src]="img(v.poster, 'screenshot_big')" width="889" height="500" loading="lazy" class="h-full w-full object-cover opacity-70" alt="" /> }
+                  <span class="absolute inset-0 grid place-items-center">
+                    <span class="grid h-16 w-16 place-items-center rounded-full bg-accent text-accent-ink transition-transform duration-300 group-hover:scale-110"><app-icon name="play" [size]="22" /></span>
+                  </span>
+                  <span class="absolute bottom-3 left-4 right-4 truncate text-left text-[13px] text-ink-2">{{ v.name }}<span class="hidden sm:inline"> · o vídeo só carrega do YouTube ao clicar</span></span>
+                </button>
+              }
+            </div>
+          </section>
+        }
+
+        <section>
+          <div role="tablist" aria-label="Informações do jogo" class="flex gap-6 border-b border-line" (keydown)="tabKey($event)">
+            <button type="button" role="tab" id="gtab-sobre" aria-controls="gpanel" [attr.aria-selected]="tab() === 'sobre'" [attr.tabindex]="tab() === 'sobre' ? 0 : -1"
+                    class="-mb-px border-b-2 pb-3 text-[15px] transition-colors" [class]="tab() === 'sobre' ? 'border-accent text-ink' : 'border-transparent text-ink-2 hover:text-ink'" (click)="tab.set('sobre')">Sobre o jogo</button>
+            <button type="button" role="tab" id="gtab-ativar" aria-controls="gpanel" [attr.aria-selected]="tab() === 'ativar'" [attr.tabindex]="tab() === 'ativar' ? 0 : -1"
+                    class="-mb-px border-b-2 pb-3 text-[15px] transition-colors" [class]="tab() === 'ativar' ? 'border-accent text-ink' : 'border-transparent text-ink-2 hover:text-ink'" (click)="tab.set('ativar')">Como ativar</button>
+          </div>
+          <div id="gpanel" role="tabpanel" [attr.aria-labelledby]="'gtab-' + tab()" class="pt-6">
+            @if (tab() === 'sobre') {
+              <p class="max-w-2xl text-[16px] leading-relaxed text-ink-2">{{ g.desc }}</p>
+              <dl class="mt-8 grid gap-x-8 gap-y-5 text-[14px] sm:grid-cols-2">
+                <div><dt class="eyebrow">Desenvolvedora</dt><dd class="mt-2">{{ g.developers.join(', ') || 'A definir' }}</dd></div>
+                <div><dt class="eyebrow">Publicadora</dt><dd class="mt-2">{{ g.publishers.join(', ') || 'A definir' }}</dd></div>
+                <div><dt class="eyebrow">Gêneros</dt><dd class="mt-2">{{ g.genres.join(', ') }}</dd></div>
+                <div><dt class="eyebrow">Modos de jogo</dt><dd class="mt-2">{{ g.modes.join(', ') || 'Um jogador' }}</dd></div>
+                <div class="sm:col-span-2">
+                  <dt class="eyebrow">Lançamento por plataforma</dt>
+                  <dd class="mt-3 flex flex-wrap gap-2">
+                    @for (r of releaseRows(); track r.label) { <span class="tag">{{ r.label }} · {{ r.date }}</span> }
+                  </dd>
+                </div>
+              </dl>
+            } @else {
+              @if (current(); as c) {
+                <p class="text-[14px] text-ink-2">Você recebe um código da <strong class="font-medium text-ink">{{ c.store }}</strong>. Para ativar:</p>
+                <ol class="mt-5 space-y-3">
+                  @for (step of activation[c.family]; track $index) {
+                    <li class="flex gap-3.5 text-[14.5px]">
+                      <span class="grid h-7 w-7 shrink-0 place-items-center rounded-lg border border-line-2 font-mono text-[12px] text-accent">{{ $index + 1 }}</span>
+                      <span class="pt-0.5">{{ step }}</span>
+                    </li>
+                  }
+                </ol>
+                <p class="mt-6 text-[12.5px] text-dim">Os códigos da G2Store são de demonstração e não funcionam em nenhuma loja.</p>
+              } @else {
+                <p class="text-[14px] text-ink-2">Escolha uma plataforma disponível para ver como ativar.</p>
+              }
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+
+    @if (related().length) {
+      <section class="cv mt-20" aria-labelledby="rel-title">
+        <p class="eyebrow">Você também pode gostar</p>
+        <h2 id="rel-title" class="h2 mt-2.5 text-[24px] sm:text-[30px]">Jogos relacionados</h2>
+        <ul class="mt-6 grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+          @for (r of related(); track r.slug) { <li><app-game-card [game]="r" /></li> }
+        </ul>
+      </section>
+    }
+  </div>
+
+  <!-- Lightbox -->
+  <dialog #lightbox class="lightbox" aria-label="Galeria ampliada" (keydown)="lightboxKey($event)" (click)="backdrop($event)" (close)="lightboxOpen.set(false)">
+    @if (lightboxOpen() && shots().length) {
+      <div class="relative">
+        <img [src]="img(shots()[shot()], '1080p')" width="1920" height="1080" class="h-auto max-h-[82dvh] w-full rounded-[12px] object-contain" [alt]="'Imagem ' + (shot() + 1) + ' de ' + g.name" />
+        <div class="mt-3 flex items-center justify-between gap-3">
+          <p class="font-mono text-[12px] text-ink-2" aria-live="polite">{{ shot() + 1 }} / {{ shots().length }}</p>
+          <div class="flex gap-2">
+            <button type="button" class="icon-btn border border-line bg-panel" (click)="step(-1)" aria-label="Imagem anterior"><app-icon name="chevron-left" /></button>
+            <button type="button" class="icon-btn border border-line bg-panel" (click)="step(1)" aria-label="Próxima imagem"><app-icon name="chevron-right" /></button>
+            <button type="button" class="icon-btn border border-line bg-panel" (click)="closeLightbox()" aria-label="Fechar galeria"><app-icon name="x" /></button>
+          </div>
+        </div>
+      </div>
+    }
+  </dialog>
+} @else {
+  <div class="wrap py-24 text-center">
+    <p class="eyebrow">Erro 404</p>
+    <h1 class="h-display mt-4 text-[40px]">Jogo não encontrado</h1>
+    <p class="mx-auto mt-4 max-w-md text-ink-2">Esse jogo não está no catálogo da G2Store.</p>
+    <a routerLink="/jogos" class="btn btn-primary mt-8">Ver todos os jogos</a>
+  </div>
+}

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /G2Store/carrinho/
+Disallow: /G2Store/checkout/
+Disallow: /G2Store/meus-pedidos/
+Disallow: /G2Store/lista-de-desejos/
+
+Sitemap: https://g2martins.github.io/G2Store/sitemap.xml

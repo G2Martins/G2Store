@@ -1,12 +1,28 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <title>G2Store</title>
+  <title>G2Store | Jogos digitais, gift cards e consoles</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="G2Store é uma loja simulada de jogos digitais para PC, PlayStation, Xbox e Nintendo: lançamentos, pré-vendas, promoções, gift cards e consoles. Projeto de portfólio de Gustavo Martins Gripaldi.">
+  <meta name="author" content="Gustavo Martins Gripaldi">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#050826">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://images.igdb.com">
+  <!-- Reveal bootstrap before first paint. Content shows anyway if JS never boots. -->
+  <script>
+    (function () {
+      var c = document.documentElement.classList;
+      c.add('js');
+      setTimeout(function () { if (!c.contains('reveal-ready')) c.add('reveal-all'); }, 3000);
+    })();
+  </script>
 </head>
 <body>
   <app-root></app-root>

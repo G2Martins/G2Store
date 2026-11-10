@@ -1,0 +1,15 @@
+{
+  "name": "G2Store",
+  "short_name": "G2Store",
+  "description": "Loja simulada de jogos digitais. Projeto de portfólio.",
+  "lang": "pt-BR",
+  "start_url": "/G2Store/",
+  "scope": "/G2Store/",
+  "display": "standalone",
+  "background_color": "#050826",
+  "theme_color": "#050826",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

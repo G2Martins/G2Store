@@ -1,0 +1,172 @@
+<a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-ink">Pular para o conteúdo</a>
+
+<!-- Portfolio disclaimer: always visible, first thing a visitor reads. -->
+<div class="border-b border-line bg-[#03051a] text-[12px] leading-snug text-ink-2">
+  <div class="wrap flex items-center justify-center gap-2 py-2 text-center">
+    <span class="live-dot hidden h-1.5 w-1.5 shrink-0 rounded-full bg-accent sm:inline-block"></span>
+    <p>
+      Projeto de portfólio de {{ links.author }}. Loja simulada: nenhuma compra ou pagamento é real.
+      <a [href]="links.project" class="ml-1 whitespace-nowrap text-accent underline underline-offset-2">Sobre o projeto</a>
+    </p>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 border-b border-line bg-[#050826]/95">
+  <div class="wrap flex h-16 items-center gap-3 lg:gap-6">
+    <button type="button" class="icon-btn -ml-2 lg:hidden" aria-label="Abrir menu" (click)="menuOpen.set(true)"><app-icon name="menu" [size]="20" /></button>
+    <a routerLink="/" class="flex shrink-0 items-center gap-2.5" aria-label="G2Store, página inicial">
+      <app-brand [size]="30" />
+      <span class="text-[19px] font-semibold tracking-[-0.04em]">G2<span class="font-light text-ink-2">Store</span></span>
+    </a>
+    <app-search class="mx-auto hidden w-full max-w-xl md:block" uid="busca" />
+    <nav class="ml-auto flex items-center md:ml-0" aria-label="Sua conta">
+      <a routerLink="/lista-de-desejos" class="icon-btn" aria-label="Lista de desejos">
+        <app-icon name="heart" [size]="20" />
+        @if (store.wish().length) { <span class="badge" aria-hidden="true">{{ store.wish().length }}</span> }
+      </a>
+      <a routerLink="/meus-pedidos" class="icon-btn hidden sm:inline-grid" aria-label="Meus pedidos"><app-icon name="package" [size]="20" /></a>
+      <button type="button" class="icon-btn" (click)="store.drawerOpen.set(true)"
+              [attr.aria-label]="'Abrir carrinho, ' + store.count() + (store.count() === 1 ? ' item' : ' itens')">
+        <app-icon name="bag" [size]="20" />
+        @if (store.count()) { <span class="badge" aria-hidden="true">{{ store.count() }}</span> }
+      </button>
+    </nav>
+  </div>
+  <div class="wrap pb-3 md:hidden"><app-search uid="busca-mobile" /></div>
+  <nav class="hidden border-t border-line/70 lg:block" aria-label="Categorias">
+    <div class="wrap flex h-11 items-center gap-7">
+      @for (f of families; track f.key) {
+        <a routerLink="/jogos" [queryParams]="{ plataforma: f.key }" class="navlink inline-flex items-center gap-2">
+          <app-icon [name]="f.icon" [size]="13" /> {{ f.label }}
+        </a>
+      }
+      <span class="h-4 w-px bg-line-2" aria-hidden="true"></span>
+      <a routerLink="/jogos" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="navlink">Todos os jogos</a>
+      <a routerLink="/promocoes" routerLinkActive="active" class="navlink">Promoções</a>
+      <a routerLink="/gift-cards" routerLinkActive="active" class="navlink">Gift Cards</a>
+      <a routerLink="/consoles" routerLinkActive="active" class="navlink">Consoles</a>
+      <a routerLink="/meus-pedidos" routerLinkActive="active" class="navlink ml-auto inline-flex items-center gap-2"><app-icon name="package" [size]="14" /> Meus pedidos</a>
+    </div>
+  </nav>
+</header>
+
+<main id="conteudo" tabindex="-1" class="relative outline-none">
+  <router-outlet />
+</main>
+
+<footer class="mt-24 border-t border-line bg-[#03051a]/80">
+  <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <div>
+      <a routerLink="/" class="inline-flex items-center gap-2.5" aria-label="G2Store, página inicial">
+        <app-brand [size]="28" />
+        <span class="text-[18px] font-semibold tracking-[-0.04em]">G2<span class="font-light text-ink-2">Store</span></span>
+      </a>
+      <p class="mt-4 max-w-xs text-[13px] leading-relaxed text-ink-2">
+        Loja simulada de jogos digitais, gift cards e consoles. Projeto de portfólio: nenhuma compra, pagamento ou código é real.
+      </p>
+    </div>
+    <div>
+      <p class="eyebrow">Loja</p>
+      <ul class="mt-4 space-y-2.5 text-[14px] text-ink-2">
+        <li><a routerLink="/jogos" class="hover:text-ink">Todos os jogos</a></li>
+        <li><a routerLink="/promocoes" class="hover:text-ink">Promoções</a></li>
+        <li><a routerLink="/jogos" [queryParams]="{ status: 'pre-venda' }" class="hover:text-ink">Pré-vendas</a></li>
+        <li><a routerLink="/gift-cards" class="hover:text-ink">Gift Cards</a></li>
+        <li><a routerLink="/consoles" class="hover:text-ink">Consoles e acessórios</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Sua conta</p>
+      <ul class="mt-4 space-y-2.5 text-[14px] text-ink-2">
+        <li><a routerLink="/carrinho" class="hover:text-ink">Carrinho</a></li>
+        <li><a routerLink="/meus-pedidos" class="hover:text-ink">Meus pedidos</a></li>
+        <li><a routerLink="/lista-de-desejos" class="hover:text-ink">Lista de desejos</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="eyebrow">Projeto</p>
+      <ul class="mt-4 space-y-2.5 text-[14px] text-ink-2">
+        <li><a [href]="links.portfolio" class="hover:text-ink">Desenvolvido por {{ links.author }}</a></li>
+        <li><a [href]="links.project" class="hover:text-ink">Sobre o G2Store no portfólio</a></li>
+        <li><a [href]="links.repo" class="inline-flex items-center gap-2 hover:text-ink"><app-icon name="github" [size]="14" /> Código no GitHub</a></li>
+        <li><a href="https://www.igdb.com" class="hover:text-ink">Dados de jogos fornecidos por IGDB.com</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-line">
+    <div class="wrap flex flex-col gap-2 py-6 text-[12px] leading-relaxed text-dim md:flex-row md:items-center md:justify-between">
+      <p>Marcas e logos pertencem aos respectivos donos. G2Store é um projeto de portfólio sem afiliação com essas empresas.</p>
+      <p class="shrink-0">© {{ year }} · <a [href]="links.portfolio" class="hover:text-ink-2">{{ links.author }}</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Visual toast + polite live region for cart / wishlist updates. -->
+<div role="status" aria-live="polite" aria-atomic="true"
+     class="pointer-events-none fixed inset-x-0 bottom-5 z-[60] flex justify-center px-4">
+  @if (toast()) {
+    <p class="materialize flex max-w-md items-center gap-2.5 rounded-full border border-line-2 bg-panel-2 px-4 py-2.5 text-[13px] shadow-2xl shadow-black/40">
+      <app-icon name="check" [size]="15" class="text-accent" /> {{ toast() }}
+    </p>
+  }
+</div>
+
+<!-- Cart drawer -->
+<dialog #cartDialog class="drawer" aria-labelledby="cart-title" (close)="closeCart()" (click)="backdrop($event, closeCart)">
+  <div class="flex h-full flex-col">
+    <div class="flex items-center justify-between border-b border-line px-5 py-4">
+      <h2 id="cart-title" class="text-[17px] font-medium">Carrinho <span class="text-ink-2">({{ store.count() }})</span></h2>
+      <button type="button" class="icon-btn -mr-2" aria-label="Fechar carrinho" (click)="closeCart()"><app-icon name="x" [size]="20" /></button>
+    </div>
+    @if (store.view().length) {
+      <app-cart-lines class="flex-1 overflow-y-auto px-5" />
+      <div class="border-t border-line px-5 py-5">
+        <div class="flex items-center justify-between text-[14px]">
+          <span class="text-ink-2">Subtotal</span>
+          <span class="text-[18px] font-semibold">{{ brl(store.subtotal()) }}</span>
+        </div>
+        @if (store.savings() > 0) { <p class="mt-1 text-right text-[12px] text-accent">Você economiza {{ brl(store.savings()) }}</p> }
+        <p class="mt-2 text-[12px] text-dim">Cupom e frete simulado são calculados no carrinho.</p>
+        <div class="mt-4 grid grid-cols-2 gap-2">
+          <a routerLink="/carrinho" class="btn btn-line">Ver carrinho</a>
+          <a routerLink="/checkout" class="btn btn-primary">Finalizar compra</a>
+        </div>
+      </div>
+    } @else {
+      <div class="flex flex-1 flex-col items-center justify-center gap-3 px-8 text-center">
+        <span class="grid h-14 w-14 place-items-center rounded-2xl border border-line bg-well text-ink-2"><app-icon name="bag" [size]="24" /></span>
+        <p class="text-[15px] font-medium">Seu carrinho está vazio</p>
+        <p class="text-[13px] text-ink-2">Lançamentos, pré-vendas e promoções esperam por você.</p>
+        <a routerLink="/jogos" class="btn btn-primary mt-2">Explorar jogos</a>
+      </div>
+    }
+  </div>
+</dialog>
+
+<!-- Mobile menu -->
+<dialog #menuDialog class="drawer drawer-left" aria-label="Menu" (close)="closeMenu()" (click)="backdrop($event, closeMenu)">
+  <div class="flex h-full flex-col">
+    <div class="flex items-center justify-between border-b border-line px-5 py-4">
+      <span class="inline-flex items-center gap-2.5"><app-brand [size]="26" /><span class="text-[17px] font-semibold tracking-[-0.04em]">G2<span class="font-light text-ink-2">Store</span></span></span>
+      <button type="button" class="icon-btn -mr-2" aria-label="Fechar menu" (click)="closeMenu()"><app-icon name="x" [size]="20" /></button>
+    </div>
+    <nav class="flex-1 overflow-y-auto px-5 py-6" aria-label="Menu principal">
+      <p class="eyebrow">Plataformas</p>
+      <ul class="mt-3 grid grid-cols-2 gap-2">
+        @for (f of families; track f.key) {
+          <li><a routerLink="/jogos" [queryParams]="{ plataforma: f.key }" class="flex items-center gap-2.5 rounded-xl border border-line bg-well px-3 py-3 text-[14px]"><app-icon [name]="f.icon" [size]="16" /> {{ f.label }}</a></li>
+        }
+      </ul>
+      <p class="eyebrow mt-8">Loja</p>
+      <ul class="mt-2 divide-y divide-line text-[15px]">
+        <li><a routerLink="/jogos" class="flex items-center justify-between py-3.5">Todos os jogos <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+        <li><a routerLink="/promocoes" class="flex items-center justify-between py-3.5">Promoções <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+        <li><a routerLink="/gift-cards" class="flex items-center justify-between py-3.5">Gift Cards <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+        <li><a routerLink="/consoles" class="flex items-center justify-between py-3.5">Consoles <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+        <li><a routerLink="/meus-pedidos" class="flex items-center justify-between py-3.5">Meus pedidos <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+        <li><a routerLink="/lista-de-desejos" class="flex items-center justify-between py-3.5">Lista de desejos <app-icon name="chevron-right" [size]="16" class="text-dim" /></a></li>
+      </ul>
+    </nav>
+    <p class="border-t border-line px-5 py-4 text-[12px] text-dim">Loja simulada. Nenhuma compra é real.</p>
+  </div>
+</dialog>
